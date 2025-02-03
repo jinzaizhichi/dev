@@ -120,7 +120,7 @@ $$
 \exists\ c : f(x) = f(\mu) + f'(\mu)(x - \mu) + \frac{f''(c)(x-\mu)^2}{2}
 $$
 
-Since $f(x)$ is concave, we know:
+Since $f(x)$ is convex, we know:
 
 $$
 f(\mu) + f'(\mu)(x - \mu) + \frac{f''(c)(x-\mu)^2}{2} \ge f(\mu) + f'(\mu)(x-\mu)

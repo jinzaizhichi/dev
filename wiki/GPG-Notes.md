@@ -71,6 +71,13 @@ gpg -a -e -u "Sender ID" -r "Recipient ID" plaintext-message
 gpg -d encrypted-message
 ```
 
+### Encrypt/Decrypt with Password
+
+```
+gpg --batch -e --passphrase secret foo.txt
+gpg --batch -d --passphrase secret foo.txt.gpg
+```
+
 ### Fin
 
 ```

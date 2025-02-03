@@ -89,6 +89,10 @@
 <h3 id="decrypt-message">Decrypt Message</h3>
 <pre><code>gpg -d encrypted-message
 </code></pre>
+<h3 id="encryptdecrypt-with-password">Encrypt/Decrypt with Password</h3>
+<pre><code>gpg --batch -e --passphrase secret foo.txt
+gpg --batch -d --passphrase secret foo.txt.gpg
+</code></pre>
 <h3 id="fin">Fin</h3>
 <pre><code>gpg --armor --export abetusk@mechaelephant.com
 </code></pre>
