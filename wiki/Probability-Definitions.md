@@ -65,6 +65,61 @@ D_{KL} (p || q) & = - \sum_{k} p(x) \lg \frac{q(x)}{p(x)} \\\\
 \end{array}
 $$
 
+Poisson Point Process
+---
+
+The term is ambiguous, so there are a few definitions and interpretations.
+
+### Point Counts
+
+$$
+\begin{array}{ll}
+\Pr\{ N = n \} & = \frac{\mu^n}{n!} e^{-\mu}
+\end{array}
+$$
+
+$$
+\to \mu = E[ N ]
+$$
+
+### Point Process on Line
+
+
+$$
+\begin{array}{ll}
+\Pr\{ N(a,b] = n \} & = \frac{[\mu(b-a)]^n}{n!} e^{-\mu(b-a)} \\
+\Pr\{ N(a _ i ,b _ i ] = n _ i, i \in [0,k)  \} & = \prod _ {i=0}^{k-1} \frac{[\mu(b _ i -a _ i )]^{n _ i}}{n _ i !} e^{-\mu(b _ i - a _ i)}
+\end{array}
+$$
+
+Where $a _ i < b _ i \le a _ {i+1}$.
+
+### Spatial Point Process
+
+$B \subset \mathbb{R}^d$ and  $B _ i \subset \mathbb{R}^d$, $\forall i,j, B _ i \cap B _ j = \emptyset$
+
+$$
+\begin{array}{ll}
+\Pr\{ N(B) = n \} & = \frac{ (\mu |B|)^n}{n!} e^{-\mu |B|} \\
+\Pr\{ N(B_i) = n_i, i \in [0,k) \} & = \prod _ {i=0} ^ {k-1} \frac{ (\mu |B_i|)^n_i}{n _ i!} e^{-\mu |B_i|} \\
+\end{array}
+$$
+
+
+
+### Counting Process
+
+$$
+\begin{array}{ll}
+\Pr\{ N(t) = n \} & = \frac{(\mu t)^n}{n!} e^{-\mu t}
+\end{array}
+$$
+
+$$
+\to E[ N(t) ]  = \mu t
+$$
+
+
 
 Maximum Likelihood Estimation
 ---
