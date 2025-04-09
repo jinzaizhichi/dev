@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>dev blog</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pygment_trac.css">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" src="js/MathJax.js"></script>
+    <!-- <script type="text/javascript" src="{{config.extra.base}}js/MathJax.js?config=TeX-AMS_HTML""></script> -->
+
+    <script type="text/javascript" src="js/audience-minutes.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header>
+        <h1>Dev Blog</h1>
+
+        <table>
+          <body>
+            <tr><td><a href="./">./dev</a></td></tr>
+           <tr>
+              <td>
+                <br /> <br /> <br />
+                <p><small> Original theme by <a href="https://github.com/orderedlist">orderedlist</a> (CC-BY-SA)</small></p>
+
+                <br />
+                <p>
+                Where applicable, all content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>.
+                <br />
+
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="img/cc-by-sa-80x15.png" /></a>
+                </p>
+              </td>
+            </tr>
+          </body>
+        </table>
+
+      </header>
+      <section>
+
+        <h1 id="javascript-notes">Javascript Notes</h1>
+<h2 id="scoping-issues-with-anonymous-functions">Scoping Issues with Anonymous Functions</h2>
+<p>Consider the following:</p>
+<pre><code>let f = [], i=0;
+while (i&lt;2) {
+  f.push( function() { return i; } );
+  i++;
+}
+for (let j=0; j&lt;f.length; j++) {
+  console.log(f[j]());
+}
+</code></pre>
+<p>This will result in:</p>
+<pre><code>2
+2
+</code></pre>
+<p>To fix:</p>
+<pre><code>let f = [], i=0;
+while (i&lt;2) {
+  f.push( (function(t) { return function() { return t; }; } )(i) );
+  i++;
+}
+for (let j=0; j&lt;f.length; j++) {
+  console.log(f[j]());
+}
+</code></pre>
+<h2 id="functions-as-classes">Functions as Classes</h2>
+<p>(<a href="https://stackoverflow.com/questions/11970141/javascript-whats-the-difference-between-a-function-and-a-class">SO</a>, <a href="https://www.toptal.com/javascript/es6-class-chaos-keeps-js-developer-up">blog</a>)</p>
+<pre><code>function foo(x) {
+  this.x = x;
+  this.s = &#39;foo&#39;;
+}
+
+foo.prototype.F = function()  { console.log(this.x, this.s); }
+foo.prototype.G = function(x) { this.x = x; }
+
+let bar = new foo(1);
+bar.F()
+bar.G(2);
+bar.F();
+</code></pre>
+<p>Results in:</p>
+<pre><code>1 foo
+2 foo
+</code></pre>
+<h2 id="variable-scope">Variable Scope</h2>
+<p>(<a href="https://stackoverflow.com/questions/500431/what-is-the-scope-of-variables-in-javascript">SO</a>)</p>
+<p>It gets pretty complicated.</p>
+<h2 id="yield">Yield</h2>
+<pre><code>unction *h1(x) {
+  console.log(&quot;h1.0:x&quot;, x);
+  yield 9;
+  x++;
+  console.log(&quot;h1.1:x&quot;, x);
+  yield 10;
+  x++;
+  console.log(&quot;h1.2:x&quot;, x);
+  yield 11;
+  x++;
+  console.log(&quot;h1.3:x&quot;, x);
+  return -2;
+}
+
+function *h0(x) {
+  let v = yield* h1(x);
+  console.log(&quot;h0&gt;&quot;, v);
+  return -1;
+}
+
+function _h(x) {
+
+  let hgen = h0(x);
+  let hv = {};
+  for (hv = hgen.next(); !hv.done; hv = hgen.next()) {
+    console.log(&quot;_h&gt;&quot;, hv);
+  }
+
+  console.log(&quot;fin&gt;&quot;, hv);
+}
+
+_h(127);
+</code></pre>
+<pre><code>h1.0:x 127
+_h&gt; { value: 9, done: false }
+h1.1:x 128
+_h&gt; { value: 10, done: false }
+h1.2:x 129
+_h&gt; { value: 11, done: false }
+h1.3:x 130
+h0&gt; -2
+fin&gt; { value: -1, done: true }
+</code></pre>
+
+
+      </section>
+
+      <!--
+      <footer>
+        <p><small> Original theme by <a href="https://github.com/orderedlist">orderedlist</a> (CC-BY-SA)</small></p>
+      </footer>
+      -->
+
+    </div>
+    <script src="js/scale.fix.js"></script>
+  </body
+</html>
