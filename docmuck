@@ -95,7 +95,8 @@ for base_md_fn in ARTICLE_LIST:
 
   tmp_fn = "/tmp/out_tmp.html"
 
-  sp.call(['pandoc', '-f', input_fmt, '-o', tmp_fn, md_fn])
+  #sp.call(['pandoc', '-f', input_fmt, '-o', tmp_fn, md_fn])
+  sp.call(['pandoc', '--highlight-style', 'pygments', '-f', input_fmt, '-o', tmp_fn, md_fn])
 
   html_snippet = ""
   with open(tmp_fn) as fp:

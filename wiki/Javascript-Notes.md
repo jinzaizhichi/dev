@@ -6,7 +6,7 @@ Scoping Issues with Anonymous Functions
 
 Consider the following:
 
-```
+```javascript
 let f = [], i=0;
 while (i<2) {
   f.push( function() { return i; } );
@@ -26,7 +26,7 @@ This will result in:
 
 To fix:
 
-```
+```javascript
 let f = [], i=0;
 while (i<2) {
   f.push( (function(t) { return function() { return t; }; } )(i) );
@@ -42,7 +42,7 @@ Functions as Classes
 
 ([SO](https://stackoverflow.com/questions/11970141/javascript-whats-the-difference-between-a-function-and-a-class), [blog](https://www.toptal.com/javascript/es6-class-chaos-keeps-js-developer-up))
 
-```
+```javascript
 function foo(x) {
   this.x = x;
   this.s = 'foo';
@@ -75,8 +75,8 @@ It gets pretty complicated.
 Yield
 ---
 
-```
-unction *h1(x) {
+```javascript
+function *h1(x) {
   console.log("h1.0:x", x);
   yield 9;
   x++;

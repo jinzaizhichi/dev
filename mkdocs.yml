@@ -50,7 +50,7 @@ nav:
   - "Puzzle-Ribbon-Tiles.md"
   - "Kullback-Leibler-Divergence.md"
   - "Statistical-Mechanics-For-Computer-Scientists.md"
-  - "Javascript-Notes.md"
+  - "Javascript-Notes.pdmd"
 
 docs_dir: 'wiki'
 use_directory_urls: false
