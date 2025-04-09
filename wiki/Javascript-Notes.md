@@ -37,6 +37,43 @@ for (let j=0; j<f.length; j++) {
 }
 ```
 
+**Note**:
+
+The following will work "as expected":
+
+```javascript
+let f = [];
+for (let i=0; i<2; i++) {
+  f.push( function() { return i; } );
+}
+for (let j=0; j<f.length; j++) {
+  console.log(f[j]());
+}
+```
+
+Which prints:
+
+```
+0
+1
+```
+
+An [article](https://stack-auth.com/blog/on-javascripts-weirdness) talks about how this
+is effectively equivalent to:
+
+```javascript
+let f = [];
+let i=0;
+for (i=0; i<2; i++) {
+  let _i = i;
+  f.push( function() { return _i; } );
+}
+...
+```
+
+And is due to what is, in my opinion, a dirty hack in the ECMAScript standard to scope
+variable inside the `for` declaration into the `for` body.
+
 Functions as Classes
 ---
 
@@ -122,4 +159,5 @@ h0> -2
 fin> { value: -1, done: true }
 ```
 
+###### 2025-04-09
 
