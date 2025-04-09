@@ -67,6 +67,20 @@
 <p>$$ H(p,q) = - \sum_{x} p(x) \lg q(x) $$</p>
 <h2 id="kullback-leilbler-divergence">Kullback-Leilbler Divergence</h2>
 <p>$$ \begin{array}{ll} D_{KL} (p || q) &amp; = - \sum_{k} p(x) \lg \frac{q(x)}{p(x)} \\ &amp; = - \left( \sum_{x} p(x) \lg q(x) - p(x) \lg p(x) \right) \end{array} $$</p>
+<h2 id="poisson-point-process">Poisson Point Process</h2>
+<p>The term is ambiguous, so there are a few definitions and interpretations.</p>
+<h3 id="point-counts">Point Counts</h3>
+<p>$$ \begin{array}{ll} \Pr{ N = n } &amp; = \frac{\mu^n}{n!} e^{-\mu} \end{array} $$</p>
+<p>$$ \to \mu = E[ N ] $$</p>
+<h3 id="point-process-on-line">Point Process on Line</h3>
+<p>$$ \begin{array}{ll} \Pr{ N(a,b] = n } &amp; = \frac{[\mu(b-a)]^n}{n!} e^{-\mu(b-a)} \ \Pr{ N(a _ i ,b _ i ] = n _ i, i \in [0,k) } &amp; = \prod _ {i=0}^{k-1} \frac{[\mu(b _ i -a _ i )]^{n _ i}}{n _ i !} e^{-\mu(b _ i - a _ i)} \end{array} $$</p>
+<p>Where $a _ i &lt; b _ i \le a _ {i+1}$.</p>
+<h3 id="spatial-point-process">Spatial Point Process</h3>
+<p>$B \subset \mathbb{R}^d$ and $B _ i \subset \mathbb{R}^d$, $\forall i,j, B _ i \cap B _ j = \emptyset$</p>
+<p>$$ \begin{array}{ll} \Pr{ N(B) = n } &amp; = \frac{ (\mu |B|)^n}{n!} e^{-\mu |B|} \ \Pr{ N(B_i) = n_i, i \in [0,k) } &amp; = \prod _ {i=0} ^ {k-1} \frac{ (\mu |B_i|)^n_i}{n _ i!} e^{-\mu |B_i|} \ \end{array} $$</p>
+<h3 id="counting-process">Counting Process</h3>
+<p>$$ \begin{array}{ll} \Pr{ N(t) = n } &amp; = \frac{(\mu t)^n}{n!} e^{-\mu t} \end{array} $$</p>
+<p>$$ \to E[ N(t) ] = \mu t $$</p>
 <h2 id="maximum-likelihood-estimation">Maximum Likelihood Estimation</h2>
 <p>todo</p>
 <h6 id="2020-06-12">2020-06-12</h6>

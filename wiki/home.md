@@ -50,3 +50,4 @@ dev
 * [Ribbon Tile Puzzle (spoilers)](Puzzle-Ribbon-Tiles.html) 2023-04-02
 * [Kullback-Leibler Divergence](Kullback-Leibler-Divergence.html) 2023-08-22
 * [Statistical Mechanics for Computer Scientists](Statistical-Mechanics-For-Computer-Scientists.html) 2023-11-12
+* [Javascript Notes](Javascript-Notes.html) 2025-04-09

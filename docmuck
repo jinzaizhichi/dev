@@ -28,24 +28,26 @@ HTML_TEMPLATE_FN = BASE_DIR + "base.html"
 ARTICLE_SRC_DIR = "wiki/"
 ARTICLE_DST_DIR = "site/"
 
-ARTICLE_LIST = [
-  "index.md", "Textile-Cheat-Sheet.md", "Image-Resize.md",
-  "Screenshots-Screencasts-Animated-Gifs.md", "ffmpeg-notes.md", "Unix-y-notes.md",
-  "lattice-reduction.md", "GCode-Conversion.md", "Git-Rename-Master.md",
-  "MkDocs-Quickstart.md", "GPG-Notes.md", "Git-Notes.md",
-  "Shannon-Entropy.md", "Enabling-Server-HTTPS.md", "BGZF-Example.md",
-  "Kelly-Criterion.md", "C-Project-Template.md", "Project-Organization.md",
-  "File-Naming-Conventions.md", "Command-Line-Option-Loose-Standard.md", "PCB-Notes.md",
-  "Coding-Style.md", "Energy-Consumption-Stats.md", "Simple-Sum.md",
-  "Fisher-Yates-Shuffle.md", "Halting-Problem.md", "Assorted-Small-Probability-Problems.md",
-  "Probability-Notes.md", "Amdahls-Law.md", "Is-It-Really-Open.md",
-  "Number-Theory-Notes.md", "Arbitrary-Binary-Functions.md", "Empirical-Laws.md",
-  "Food-CO2-Water.md", "SSH-Recipes.md", "Future-Predictions.md",
-  "Diophantine-Approximation.md", "GCode-Common.md", "Misc-Math.md",
-  "Socio-Economic-Definitions.md", "Bitcoin-Moon-Math.md", "Energy-Discussion.md",
-  "AWK-Cheatsheet.pdmd", "Littlewood-Polynomials-Notes.md", "Useful-Tables.md",
-  "Belief-Propagation.md", "Probability-Definitions.md", "Puzzle-Ribbon-Tiles.md",
-  "Kullback-Leibler-Divergence.md", "Statistical-Mechanics-For-Computer-Scientists.md" ]
+#ARTICLE_LIST = [
+#  "index.md", "Textile-Cheat-Sheet.md", "Image-Resize.md",
+#  "Screenshots-Screencasts-Animated-Gifs.md", "ffmpeg-notes.md", "Unix-y-notes.md",
+#  "lattice-reduction.md", "GCode-Conversion.md", "Git-Rename-Master.md",
+#  "MkDocs-Quickstart.md", "GPG-Notes.md", "Git-Notes.md",
+#  "Shannon-Entropy.md", "Enabling-Server-HTTPS.md", "BGZF-Example.md",
+#  "Kelly-Criterion.md", "C-Project-Template.md", "Project-Organization.md",
+#  "File-Naming-Conventions.md", "Command-Line-Option-Loose-Standard.md", "PCB-Notes.md",
+#  "Coding-Style.md", "Energy-Consumption-Stats.md", "Simple-Sum.md",
+#  "Fisher-Yates-Shuffle.md", "Halting-Problem.md", "Assorted-Small-Probability-Problems.md",
+#  "Probability-Notes.md", "Amdahls-Law.md", "Is-It-Really-Open.md",
+#  "Number-Theory-Notes.md", "Arbitrary-Binary-Functions.md", "Empirical-Laws.md",
+#  "Food-CO2-Water.md", "SSH-Recipes.md", "Future-Predictions.md",
+#  "Diophantine-Approximation.md", "GCode-Common.md", "Misc-Math.md",
+#  "Socio-Economic-Definitions.md", "Bitcoin-Moon-Math.md", "Energy-Discussion.md",
+#  "AWK-Cheatsheet.pdmd", "Littlewood-Polynomials-Notes.md", "Useful-Tables.md",
+#  "Belief-Propagation.md", "Probability-Definitions.md", "Puzzle-Ribbon-Tiles.md",
+#  "Kullback-Leibler-Divergence.md", "Statistical-Mechanics-For-Computer-Scientists.md" ]
+
+ARTICLE_LIST = []
 
 
 with open(YAML_CONFIG) as fp:
@@ -54,6 +56,9 @@ with open(YAML_CONFIG) as fp:
   except yaml.YAMLError as e:
     print(e)
     sys.exit(-1)
+
+
+ARTICLE_LIST = CONFIG_DATA["nav"]
 
 #print(json.dumps(CONFIG_DATA, indent=2))
 

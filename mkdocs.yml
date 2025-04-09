@@ -43,13 +43,14 @@ nav:
   - "Socio-Economic-Definitions.md"
   - "Bitcoin-Moon-Math.md"
   - "Energy-Discussion.md"
-  - "AWK-Cheatsheet.md"
+  - "AWK-Cheatsheet.pdmd"
   - "Littlewood-Polynomials-Notes.md"
   - "Useful-Tables.md"
   - "Belief-Propagation.md"
   - "Puzzle-Ribbon-Tiles.md"
   - "Kullback-Leibler-Divergence.md"
   - "Statistical-Mechanics-For-Computer-Scientists.md"
+  - "Javascript-Notes.md"
 
 docs_dir: 'wiki'
 use_directory_urls: false
