@@ -1,0 +1,38 @@
+#!/bin/bash
+
+BASE_DIR="/root/vid_drive"
+LOGFILE="/root/info/vidrecord.log"
+PIDFILE="/root/info/vidrecord.pid"
+WATCHFILE="/root/info/vidrecord.watch"
+
+W=1920
+H=1080
+T=`echo "60*5*1000" | bc`
+
+PID=$$
+echo $$ > $PIDFILE
+
+while [[ true ]] ; do
+  touch $BASE_DIR/alive
+  if [[ $? == 0 ]] ; then
+    break
+  fi
+
+  dts=`date +'%Y-%m-%d_%H:%M:%S'`
+  echo "$dts.$PID: waiting on usb drive, sleeping" >> $LOGFILE
+  sleep 5
+done
+
+dts=`date +'%Y-%m-%d_%H:%M:%S'`
+echo "$dts.$PID: starting" >> $LOGFILE
+
+while [[ true ]] ; do
+  dts=`date +'%Y-%m-%d_%H:%M:%S'`
+  dt=`date +'%Y_%m_%d_%H_%M'`
+  ofn="${BASE_DIR}/${dt}.vid"
+
+  echo `date +'%s'` > $WATCHFILE
+
+  echo "$dts.$PID: $ofn ($W,$H,$T)" >> $LOGFILE
+  rpicam-vid -t $T --width $W --height $H -o $ofn > /dev/null 2> /dev/null
+done

@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+
+VERBOSE=1
+
+BASE_DIR="/mnt/vid_drive"
+BASE_DIR="/root/vid_drive"
+LOGFILE="/root/info/vidrecord.log"
+PIDFILE="/root/info/vidrecord.pid"
+WATCHFILE="/root/info/vidrecord.watch"
+
+# 10 min threshold for restart
+DS=600
+
+s=0
+nows=`date +'%s'`
+vidpid=""
+
+#mount | grep sda
+#if [[ $? == 1 ]] ; then
+#
+#  if [[ "$VERBOSE" -gt 0 ]] ; then
+#    echo "creating $BASE_DIR"
+#  fi
+#  mkdir -p $BASE_DIR
+#  mount /dev/sda $BASE_DIR
+#else
+#  if [[ "$VERBOSE" -gt 0 ]] ; then
+#    echo "already mounted ($BASE_DIR)"
+#  fi
+#fi
+
+if [[ -e $PIDFILE ]] ; then
+  vidpid=`cat $PIDFILE`
+fi
+
+if [[ -e $WATCHFILE ]] ; then
+  s=`cat $WATCHFILE`
+fi
+
+ds=`echo "$nows - $s" | bc `
+
+if [[ "$VERBOSE" -gt 0 ]] ; then
+  echo "ds: $ds ($nows - $s), DS:$DS"
+fi
+
+if [[ $ds -gt $DS ]] ; then
+
+  if [[ "$vidpid" != "" ]] ; then
+    kill -9 $vidpid
+  fi
+
+  if [[ "$VERBOSE" -gt 0 ]] ; then
+    echo "starting"
+  fi
+  killall rpicam-vid
+  /root/vidrecord &
+
+  exit 0
+fi
+
+if [[ "$VERBOSE" -gt 0 ]] ; then
+  echo "nothing"
+fi
+exit 0
+
+
