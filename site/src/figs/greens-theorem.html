@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Green's Theorem</title>
+
+  <!--  <link rel="icon" type="image/png" href="images/favicon.ico"> -->
+  <script id='MathJax-script' type='text/javascript' async src='js/mathjax/es5/tex-svg.js'></script>
+
+  <script type='text/javascript' src='js/two.js'></script>
+  <script type='text/javascript' src='js/greens_theorem.js'></script>
+  <script type='text/javascript' src='js/FileSaver.js'></script>
+  <!--  <link rel='stylesheet' href='css/CSS.css'> -->
+
+
+  <script>
+    MathJax = {
+      startup : { pageReady: () => {
+        let _r = MathJax.startup.defaultPageReady();
+        setTimeout(mathjax_ready, 1);
+        return _r;
+      }},
+      loader : { load: [ 'output/svg' ] },
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'none' }
+    };
+  </script>
+
+
+</head>
+
+<body>
+
+     
+  <div id='Gamma0' style='display:none;'>$\Gamma_0$</div>
+  <div id='Gamma1' style='display:none;'>$\Gamma_1$</div>
+  <div id='Gamma2' style='display:none;'>$\Gamma_2$</div>
+  <div id='Gamma3' style='display:none;'>$\Gamma_3$</div>
+  <div id='Omega' style='display:none;'>$\Omega$</div>
+
+
+
+  <div id='canvas_id' style='width:300px;height:300px;'></div>
+
+</body>
+
+<script>
+  function mathjax_ready() {
+    init();
+  }
+</script>
+
+<html>
+

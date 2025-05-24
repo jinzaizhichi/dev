@@ -51,6 +51,7 @@ nav:
   - "Kullback-Leibler-Divergence.md"
   - "Statistical-Mechanics-For-Computer-Scientists.md"
   - "Javascript-Notes.pdmd"
+  - "Complex-Analysis-in-a-Nutshell.md"
 
 docs_dir: 'wiki'
 use_directory_urls: false

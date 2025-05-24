@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>dev blog</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/pygment_trac.css"> -->
+    <link rel="stylesheet" href="css/pygments_style.css">
+
+<!--
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" src="js/MathJax.js"></script>
+-->
+    <!-- <script type="text/javascript" src="{{config.extra.base}}js/MathJax.js?config=TeX-AMS_HTML""></script> -->
+
+  <script>
+  MathJax = {
+    startup : { pageReady: () => {
+      let _r = MathJax.startup.defaultPageReady();
+      //setTimeout(mathjax_ready, 1);
+      return _r;
+    }},
+    loader : { load: [ 'output/svg' ] },
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: {
+      //useGlobalCache: false }
+      fontCache: 'none' }
+      //fontCache: 'global' }
+  };
+  </script>
+
+  <script id='MathJax-script' type='text/javascript' async src='js/mathjax/es5/tex-svg.js'></script>
+
+
+    <script type="text/javascript" src="js/audience-minutes.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header>
+        <h1>Dev Blog</h1>
+
+        <table>
+          <body>
+            <tr><td><a href="./">./dev</a></td></tr>
+           <tr>
+              <td>
+                <br /> <br /> <br />
+                <p><small> Original theme by <a href="https://github.com/orderedlist">orderedlist</a> (CC-BY-SA)</small></p>
+
+                <br />
+                <p>
+                Where applicable, all content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>.
+                <br />
+
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="img/cc-by-sa-80x15.png" /></a>
+                </p>
+              </td>
+            </tr>
+          </body>
+        </table>
+
+      </header>
+      <section>
+
+        <h1 id="complex-analysis-in-a-nutshell">Complex Analysis in a Nutshell</h1>
+<p>$$ \begin{array}{l} z \in \mathbb{C}, z = x + iy, x,y, \in \mathbb{R} \\ u(x,y), v(x,y) \in \mathbb{R}^2 \mapsto \mathbb{R} \\ f(z) = u(x,y) + iv(x,y), \ dz = dx + idy \end{array} $$</p>
+<h2 id="caucy-riemann-condition-for-analyticy">Caucy-Riemann Condition (for analyticy)</h2>
+<p>$$ \begin{array}{l} f'(z) = \frac{fz + dz) - f(z)}{z + dz - z} = \frac{f(z + dz) - f(z)}{dz} \\ = \frac{[ u(x+dx, y+dy) - u(x,y)] + i([v(x+dx,y+dy) - v(x,y)]}{dx + idy } \\ dx \to 0: f'(z) = -i \frac{\partial u}{\partial y} + \frac{\partial v}{\partial y} \\ dy \to 0: f'(z) = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\ \to \frac{\partial v}{\partial y} - i \frac{\partial u}{\partial y} = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\ \boxed{ \frac{\partial v}{\partial y} = \frac{\partial u}{\partial x}, \ \ -\frac{\partial u}{\partial y} = \frac{ \partial v}{\partial x} } \\ \end{array} $$</p>
+<h2 id="greens-theorem-omega-analytic">Greens Theorem: \Omega analytic</h2>
+<p><img src="img/greens_theorem.svg" alt="Green&#39;s Theorem" /></p>
+<p>$$ \begin{array}{l} \boxed{ \int\limits _ {\partial \Omega} p\ dx = - \iint\limits _ {\Omega} p _ y\ dx\ dy } \end{array} $$</p>
+<p>Proof:</p>
+<p>$$ \begin{array}{llr} \int\limits _ {\partial \Omega} p\ dx &amp; = \int\limits _ { \Gamma _ 0} p(x,y) dx + \int\limits _ {\Gamma _ 2} p(x,y) dx &amp; \\ &amp; = \int\limits _ {x _ 0}^{x _ 1} p(x, y _ 0) dx + \int\limits _ {x _ 1}^{x _ 0} p(x,y _ 1) dx &amp; \\ &amp; = - \int\limits _ {x _ 0} ^ {x _ 1} ( p(x,y _ 1) - p(x, y _ 0)) dx &amp; \\ &amp; = - \int\limits _ {x _ 0}^{x _ 1} \int\limits _ {y _ 0}^{y _ 1} p _ y \ dy \ dx &amp; \\ &amp; &amp; \blacksquare \\ \end{array} $$</p>
+<p>$$ \begin{array}{l} \boxed{ \int\limits _ {\partial \Omega} q\ dy = \iint\limits _ {\Omega} q _ x\ dx\ dy } \end{array} $$</p>
+<p>Proof:</p>
+<p>$$ \begin{array}{llr} \int\limits _ {\partial \Omega} q\ dy &amp; = \int\limits _ { \Gamma _ 1} q(x,y) dy + \int\limits _ {\Gamma _ 3} q(x,y) dy &amp; \\ &amp; = \int\limits _ {y _ 0}^{y _ 1} q(x _ 1,y) dy + \int\limits _ {y _ 1}^{y _ 0} q(x _ 0, y) dy &amp; \\ &amp; = \int\limits _ {y _ 0} ^ {y _ 1} ( q(x _ 1, y) - q( x _ 0, y)) dy &amp; \\ &amp; = \int\limits _ {y _ 0}^{y _ 1} \int\limits _ {x _ 0}^{x _ 1} q _ y \ dx \ dy &amp; \\ &amp; &amp; \blacksquare \\ \end{array} $$</p>
+<h2 id="cauchy-theorem">Cauchy Theorem</h2>
+<p>$f(z)$ analytic in $\Omega$:</p>
+<p>$$ \begin{array}{ll} \to &amp; \boxed{ \oint\limits _ {\partial \Omega} f(z)\ dz = 0 } \\ \end{array} $$</p>
+<p>Proof:</p>
+<p>$$ \begin{array}{llr} \oint\limits _ {\partial \Omega} f(z)\ dz &amp; = \oint\limits _ {\partial \Omega} (u + iv)(dx + idy) &amp; \\ &amp; = \oint\limits _ {\partial \Omega} (u dx + - v dy) + i \oint\limits _ {\partial \Omega} ( u dy + v dx) &amp; \\ &amp; = \iint\limits _ {\Omega} (- u _ y - v _ x ) dx\ dy + i \iint\limits _ {\Omega} ( u _ x - v _ y ) dx \ dy &amp; \\ &amp; = 0 + 0i = 0 &amp; \\ &amp; &amp; \blacksquare \\ \end{array} $$</p>
+<h2 id="singularities">Singularities</h2>
+<h3 id="type-i-removable">Type I (removable)</h3>
+<p>$$ \text{Def: } \lim\limits _ {z \to z _ 0} f(z) = \omega _ 0 $$</p>
+<h4 id="example">example</h4>
+<p>$$ \frac{\sin(z)}{z} $$</p>
+<p>$z=0$ undefined but:</p>
+<p>$$ \frac{1}{z}(z - \frac{z^3}{3!} + \frac{z^5}{5!} - \dots ) = 1 - \frac{z^2}{3!} + \frac{z^4}{5!} - \dots = 1 $$</p>
+<h3 id="type-ii-pole">Type II (pole)</h3>
+<p>$$ \text{Def: } \lim\limits _ {z \to z _ 0} |f(z)| = + \infty $$</p>
+<h4 id="example-1">example</h4>
+<p>$$ \frac{1}{z} $$</p>
+<h3 id="type-iii-essential">Type III (essential)</h3>
+<p>Def: neigher of the other two</p>
+<h4 id="example-2">example</h4>
+<p>$e^{\frac{1}{z}}$, $\ln(z)$</p>
+<h2 id="picards-theorem">Picards Theorem</h2>
+<p>(stated without proof)</p>
+<p>Every puncured disc about an isolated essential singularity assumes every complex value with at most one exception.</p>
+<h2 id="riemann-mapping-theorem">Riemann Mapping Theorem</h2>
+<p>$\Omega$ domain in $\mathbb{C}$. There exists a 1-1 analytic (and conformal) mapping $f$ of $\Omega$ onto the opn unit disc iff $\Omega$ is simply connected but not equal to the entire plance $\mathbb{C}$.</p>
+<h2 id="misc">Misc.</h2>
+<p>$$ \begin{array}{ll} \oint\limits _ {C(0,1)} \frac{1}{z} dz &amp; = \oint \frac{x - iy}{x^2 + y^2} (dx + idy) \\ &amp; = \int\limits _ {0} ^ {2 \pi} (\cos(t) - i \sin(t)) (-\sin(t) + i \cos(t)) dt \\ &amp; = \int\limits _ {0} ^ {2 \pi} (-cos(t)\sin(t) + \cos^2(t)) dt \\ &amp; = 2 \pi i \end{array} $$</p>
+<p>$\frac{1}{z}$ is <em>not</em> analytic on interior of $C(0,1)$ (which is why Cauchy's theorem doesn't apply).</p>
+<hr />
+<p>$$ \begin{array}{l} \text{Res}(f(a)) = \lim\limits _ {z \to a} (z - a) f(z) \\ z = r e^{i \theta} \to \text{Arg}(z) = \theta \\ \end{array} $$</p>
+<p>$\text{Res}$ for <em>Residue</em>.</p>
+<hr />
+<p>$f(z)$ not analytic at $z _ 0$. Assume $g(z)$ analytic in $\Omega$.</p>
+<p>$$ \oint\limits _ {\partial \Omega} \frac{g(z)}{z - z _ 0} dz = 2 \pi g(z _ 0) $$</p>
+<p>So,</p>
+<p>$$ \oint\limits _ {\partial \Omega} \frac{g(z)}{z - z _ 0} dz = 2 \pi \text{Res}(f(z _ 0)) $$</p>
+<p>in general,</p>
+<p>$$ \boxed{ \oint\limits _ {\partial \Omega} f(z) dz = 2 \pi i \sum\limits _ k \text{Res}(f(a _ k)) } $$</p>
+<hr />
+<p>$f(z)$ continuous on $\Gamma$, $|f(z)| \le M$ on $\Gamma$ and $L = $ length $\Gamma$</p>
+<p>$$ \to \left| \int\limits _ {\Gamma} f(z) dz \right| \le \int\limits _ {\Gamma} |f(z)||dz| \le ML $$</p>
+<p>(ML inequality)</p>
+<hr />
+<p>$f(z)$ analytic on $\Omega$, continuous on $\overline \Omega$</p>
+<p>$$ \to \text{max}( |f(z)|) \in |f(w)|,\ w \in \partial \Omega $$</p>
+<p>(weak maximum modulus principle)</p>
+<hr />
+<p>$$ n \in \mathbb{Z} \to \oint\limits _ C z^n dz = \left\{ \begin{array}{ll} 0 &amp; n &gt; 0 \\ 2 \pi i &amp; n = 0 \\ 0 &amp; n &lt; 0 \\ \end{array} \right. $$</p>
+<p>$$ \begin{array}{ll} p(z) &amp; = \sum p _ j z^j \to p(z) z ^ {-k-1} = \sum p _ j z ^ {j - k -1} \\ \to &amp; \oint\limits _ C p(z) z^{-k-1} dz = \oint\limits _ C \sum p _ j z^{j-k-1} dz \\ &amp; = \sum \oint\limits _ C p _ j z^{j-k-1} dz \\ &amp; = p _ k \\ \to &amp; p _ k = \oint\limits _ C p(z)z^{-k-1} dz \end{array} $$</p>
+<h6 id="2025-05-24">2025-05-24</h6>
+
+
+      </section>
+
+      <!--
+      <footer>
+        <p><small> Original theme by <a href="https://github.com/orderedlist">orderedlist</a> (CC-BY-SA)</small></p>
+      </footer>
+      -->
+
+    </div>
+    <script src="js/scale.fix.js"></script>
+  </body
+</html>

@@ -51,3 +51,4 @@ dev
 * [Kullback-Leibler Divergence](Kullback-Leibler-Divergence.html) 2023-08-22
 * [Statistical Mechanics for Computer Scientists](Statistical-Mechanics-For-Computer-Scientists.html) 2023-11-12
 * [Javascript Notes](Javascript-Notes.html) 2025-04-09
+* [Complex Analysis in a Nutshell](Complex-Analysis-in-a-Nutshell.html) 2025-04-24
