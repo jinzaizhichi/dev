@@ -75,7 +75,7 @@
 
         <h1 id="arbitrary-binary-functions">Arbitrary Binary Functions</h1>
 <p>Shannon's counting argument.</p>
-<p>$$ x \in \mathbb{B}^n \\ \\ f(X): \{0,1\}^n \mapsto \{0,1\} $$</p>
+<p>$$ \begin{array}{l} x \in \mathbb{B}^n \\ \\ f(X): \{0,1\}^n \mapsto \{0,1\} \end{array} $$</p>
 <p>There are $2^{2^n}$ different binary functions. Can we approximate this with less than $\frac{2^n}{c n}$ boolean gates for some constant $c$?</p>
 <p>The strategy to show we can't is to overcount the number of boolean gates.</p>
 <p>$$ \begin{align} m &amp; &amp; \text{ boolean gates } (\frac{2^n}{c n}) \\ n &amp; &amp; \text{ inputs } \end{align} $$</p>
@@ -83,7 +83,7 @@
 <p>We have a total of $(n+3)$ labels for each gate and a maximum of $m^2$ input choices.</p>
 <p>Each of the $m$ gates has a choice of label and choice of inputs, giving:</p>
 <p>$$ ((n + 3) m^2)^m $$</p>
-<p>$$ \lg = \log_2 $$</p>
+<p>$$ \lg = \log _ 2 $$</p>
 <p>For $n$ large enough:</p>
 <p>$$ \begin{align} \lg( ((n + 3) m^2)^m ) &amp; = \frac{2^n}{c n} [ \lg(n+3) + 2 n - 2 \lg(c n) ] \\ = \frac{2^n}{c} [ \frac{\lg(n+3)}{n} + 2 - \frac{2 \lg(c n)}{n} ] &amp; &lt; \frac{2^n}{c} [ \frac{2 \lg(n)}{n} + 2 - \frac{2 \lg(c n)}{n} ] \\ = \frac{2^n}{c} [ 2 + \frac{2}{n} ( \lg(n) - \lg(n) - \lg(c) ) ] &amp; = \frac{2^n}{c} [ 2 - \frac{2}{n} \lg(c) ] \\ &lt; 2 \frac{ 2^n }{ c } &amp; = \frac{2^n}{ \frac{c}{2} } \end{align} $$</p>
 <p>For $c&gt;2$:</p>

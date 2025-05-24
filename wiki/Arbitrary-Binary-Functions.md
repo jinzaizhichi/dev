@@ -4,9 +4,11 @@ Arbitrary Binary Functions
 Shannon's counting argument.
 
 $$
+\begin{array}{l}
 x \in \mathbb{B}^n \\\\
  \\\\
 f(X): \\{0,1\\}^n \mapsto \\{0,1\\}
+\end{array}
 $$
 
 There are $2^{2^n}$ different binary functions.
@@ -34,7 +36,7 @@ $$
 $$
 
 $$
-\lg = \log_2
+\lg = \log _ 2
 $$
 
 For $n$ large enough:
