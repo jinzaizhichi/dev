@@ -9,11 +9,11 @@ f(z) = u(x,y) + iv(x,y), \ dz = dx + idy
 \end{array}
 $$
 
-## Caucy-Riemann Condition (for analyticy)
+## Cauchy-Riemann Condition (for analyticy)
 
 $$
 \begin{array}{l}
-f'(z) = \frac{fz + dz) - f(z)}{z + dz - z} = \frac{f(z + dz) - f(z)}{dz} \\\\
+f'(z) = \frac{f(z + dz) - f(z)}{z + dz - z} = \frac{f(z + dz) - f(z)}{dz} \\\\
 = \frac{[ u(x+dx, y+dy) - u(x,y)] + i([v(x+dx,y+dy) - v(x,y)]}{dx + idy } \\\\
 dx \to 0: f'(z) = -i \frac{\partial u}{\partial y} + \frac{\partial v}{\partial y} \\\\
 dy \to 0: f'(z) = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\\\
@@ -22,9 +22,9 @@ dy \to 0: f'(z) = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x
 \end{array}
 $$
 
-## Greens Theorem: \Omega analytic
+## Greens Theorem: $\Omega$ analytic
 
-![Green's Theorem](img/greens_theorem.svg)
+![Green's Theorem](img/greens_theorem.svg#center)
 
 $$
 \begin{array}{l}
@@ -120,7 +120,7 @@ $$
 
 ### Type III (essential)
 
-Def: neigher of the other two
+Def: neither of the other two
 
 #### example
 
@@ -130,14 +130,14 @@ $e^{\frac{1}{z}}$, $\ln(z)$
 
 (stated without proof)
 
-Every puncured disc about an isolated essential singularity assumes every complex value with at most one exception.
+Every punctured disc about an isolated essential singularity assumes every complex value with at most one exception.
 
 
 ## Riemann Mapping Theorem
 
 $\Omega$ domain in $\mathbb{C}$.
-There exists a 1-1 analytic (and conformal) mapping $f$ of $\Omega$ onto the opn unit disc iff $\Omega$ is
-simply connected but not equal to the entire plance $\mathbb{C}$.
+There exists a 1-1 analytic (and conformal) mapping $f$ of $\Omega$ onto the open unit disc iff $\Omega$ is
+simply connected but not equal to the entire plane $\mathbb{C}$.
 
 
 ## Misc.

@@ -75,10 +75,10 @@
 
         <h1 id="complex-analysis-in-a-nutshell">Complex Analysis in a Nutshell</h1>
 <p>$$ \begin{array}{l} z \in \mathbb{C}, z = x + iy, x,y, \in \mathbb{R} \\ u(x,y), v(x,y) \in \mathbb{R}^2 \mapsto \mathbb{R} \\ f(z) = u(x,y) + iv(x,y), \ dz = dx + idy \end{array} $$</p>
-<h2 id="caucy-riemann-condition-for-analyticy">Caucy-Riemann Condition (for analyticy)</h2>
-<p>$$ \begin{array}{l} f'(z) = \frac{fz + dz) - f(z)}{z + dz - z} = \frac{f(z + dz) - f(z)}{dz} \\ = \frac{[ u(x+dx, y+dy) - u(x,y)] + i([v(x+dx,y+dy) - v(x,y)]}{dx + idy } \\ dx \to 0: f'(z) = -i \frac{\partial u}{\partial y} + \frac{\partial v}{\partial y} \\ dy \to 0: f'(z) = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\ \to \frac{\partial v}{\partial y} - i \frac{\partial u}{\partial y} = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\ \boxed{ \frac{\partial v}{\partial y} = \frac{\partial u}{\partial x}, \ \ -\frac{\partial u}{\partial y} = \frac{ \partial v}{\partial x} } \\ \end{array} $$</p>
-<h2 id="greens-theorem-omega-analytic">Greens Theorem: \Omega analytic</h2>
-<p><img src="img/greens_theorem.svg" alt="Green&#39;s Theorem" /></p>
+<h2 id="cauchy-riemann-condition-for-analyticy">Cauchy-Riemann Condition (for analyticy)</h2>
+<p>$$ \begin{array}{l} f'(z) = \frac{f(z + dz) - f(z)}{z + dz - z} = \frac{f(z + dz) - f(z)}{dz} \\ = \frac{[ u(x+dx, y+dy) - u(x,y)] + i([v(x+dx,y+dy) - v(x,y)]}{dx + idy } \\ dx \to 0: f'(z) = -i \frac{\partial u}{\partial y} + \frac{\partial v}{\partial y} \\ dy \to 0: f'(z) = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\ \to \frac{\partial v}{\partial y} - i \frac{\partial u}{\partial y} = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\ \boxed{ \frac{\partial v}{\partial y} = \frac{\partial u}{\partial x}, \ \ -\frac{\partial u}{\partial y} = \frac{ \partial v}{\partial x} } \\ \end{array} $$</p>
+<h2 id="greens-theorem-omega-analytic">Greens Theorem: $\Omega$ analytic</h2>
+<p><img src="img/greens_theorem.svg#center" alt="Green&#39;s Theorem" /></p>
 <p>$$ \begin{array}{l} \boxed{ \int\limits _ {\partial \Omega} p\ dx = - \iint\limits _ {\Omega} p _ y\ dx\ dy } \end{array} $$</p>
 <p>Proof:</p>
 <p>$$ \begin{array}{llr} \int\limits _ {\partial \Omega} p\ dx &amp; = \int\limits _ { \Gamma _ 0} p(x,y) dx + \int\limits _ {\Gamma _ 2} p(x,y) dx &amp; \\ &amp; = \int\limits _ {x _ 0}^{x _ 1} p(x, y _ 0) dx + \int\limits _ {x _ 1}^{x _ 0} p(x,y _ 1) dx &amp; \\ &amp; = - \int\limits _ {x _ 0} ^ {x _ 1} ( p(x,y _ 1) - p(x, y _ 0)) dx &amp; \\ &amp; = - \int\limits _ {x _ 0}^{x _ 1} \int\limits _ {y _ 0}^{y _ 1} p _ y \ dy \ dx &amp; \\ &amp; &amp; \blacksquare \\ \end{array} $$</p>
@@ -102,14 +102,14 @@
 <h4 id="example-1">example</h4>
 <p>$$ \frac{1}{z} $$</p>
 <h3 id="type-iii-essential">Type III (essential)</h3>
-<p>Def: neigher of the other two</p>
+<p>Def: neither of the other two</p>
 <h4 id="example-2">example</h4>
 <p>$e^{\frac{1}{z}}$, $\ln(z)$</p>
 <h2 id="picards-theorem">Picards Theorem</h2>
 <p>(stated without proof)</p>
-<p>Every puncured disc about an isolated essential singularity assumes every complex value with at most one exception.</p>
+<p>Every punctured disc about an isolated essential singularity assumes every complex value with at most one exception.</p>
 <h2 id="riemann-mapping-theorem">Riemann Mapping Theorem</h2>
-<p>$\Omega$ domain in $\mathbb{C}$. There exists a 1-1 analytic (and conformal) mapping $f$ of $\Omega$ onto the opn unit disc iff $\Omega$ is simply connected but not equal to the entire plance $\mathbb{C}$.</p>
+<p>$\Omega$ domain in $\mathbb{C}$. There exists a 1-1 analytic (and conformal) mapping $f$ of $\Omega$ onto the open unit disc iff $\Omega$ is simply connected but not equal to the entire plane $\mathbb{C}$.</p>
 <h2 id="misc">Misc.</h2>
 <p>$$ \begin{array}{ll} \oint\limits _ {C(0,1)} \frac{1}{z} dz &amp; = \oint \frac{x - iy}{x^2 + y^2} (dx + idy) \\ &amp; = \int\limits _ {0} ^ {2 \pi} (\cos(t) - i \sin(t)) (-\sin(t) + i \cos(t)) dt \\ &amp; = \int\limits _ {0} ^ {2 \pi} (-cos(t)\sin(t) + \cos^2(t)) dt \\ &amp; = 2 \pi i \end{array} $$</p>
 <p>$\frac{1}{z}$ is <em>not</em> analytic on interior of $C(0,1)$ (which is why Cauchy's theorem doesn't apply).</p>
