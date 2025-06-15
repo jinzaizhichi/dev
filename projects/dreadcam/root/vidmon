@@ -1,6 +1,13 @@
 #!/bin/bash
 #
 
+# watchdog for vidrecord.
+# vidrecord will update watchfile
+# with last accessed time.
+# if time in watchfile exceeds threshold,
+# kill rpi-cam-vid, vidrecord and restart
+#
+
 VERBOSE=1
 
 BASE_DIR="/mnt/vid_drive"

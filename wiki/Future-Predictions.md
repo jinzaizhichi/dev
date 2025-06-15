@@ -90,9 +90,9 @@ Part of this prediction is the fact that crypto currency solves a lot of problem
 * Currency exchanges (for purchases, etc.) are normalized to a de-factor standard (e.g. Bitcoin)
 * Non provincial ownership allowing for de-centralized operation and direction
 
-As a side note, total global wealth as of 2019 is estimated to be $\$$360T
-($ \$360 \cdot 10^{12} $) ([src](https://www.credit-suisse.com/about-us/en/reports-research/global-wealth-report.html)).
-If Bitcoin is capped at 21M coins and establishes itself by storing %20 of the $\$$360T, this gives $ \frac{ \$360T \cdot 0.2 }{ 21M BTC } \approx \$3.4M/BTC $.
+As a side note, total global wealth as of 2019 is estimated to be $\\$$360T
+($\\$360 \cdot 10^{12}$) ([src](https://www.credit-suisse.com/about-us/en/reports-research/global-wealth-report.html)).
+If Bitcoin is capped at 21M coins and establishes itself by storing %20 of the $\\$$360T, this gives $\frac{ \\$360T \cdot 0.2 }{ 21M BTC } \approx \\$3.4M/BTC$.
 
 ---
 
