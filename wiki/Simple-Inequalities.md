@@ -38,7 +38,7 @@ $$
 \begin{array}{llr}
 e ^ { -x } & = 1 - x e ^ { x _ * } \\
 \forall x _ * , & 0 \ge x _ * \ge 1, \\
- &  0 \ge e ^ { -x _ * } \le 1 \\
+ &  0 \le e ^ { -x _ * } \le 1 \\
  \to & -e ^ { -x _ * } \ge -1 \\
  \to & -x e ^ { -x _ * } \ge -x  & (x \ge 0) \\
  \to & 1 - x e ^ { -x _ * } \ge 1 - x  \\
@@ -110,7 +110,7 @@ $$
 $a _ i = 0$ trivial, assume:
 
 $$
-a _ i > 0$, $0 < a _ 0 \le a _ 1 \le a _ 2 \le \dots \le a _ {n-1}
+a _ i > 0, 0 < a _ 0 \le a _ 1 \le a _ 2 \le \dots \le a _ {n-1}
 $$
 
 $$
@@ -118,6 +118,7 @@ $$
 & 0 < a _ i  \le 1 \\
 \to & ( \sum a _ i)^n \ge (\sum a _ 0)^n = n^n a _ 0 ^ n \\
  & \ge n ^ n \prod a _ i \\
+\end{array}
 $$
 
 Now,
