@@ -1,6 +1,63 @@
 Simple Inequalities
 ===
 
+**Claim**: $a, b \in \mathbb{R}^n \to (a^T \cdot b)^2 \le |a|^2 |b|^2$
+
+(Cauchy-Schwartz Inequality)
+
+Take:
+
+$$
+\begin{array}{l}
+A = \sum a _ i ^ 2 \\
+B = \sum b _ i ^ 2 \\
+C = \sum a _ i b _ i \\
+\end{array}
+$$
+
+
+Consider $t \in \mathbb{R}$, $|| t a + b ||$.
+Any vector $||v|| \ge 0$.
+
+$$
+\begin{array}{ll}
+ & ||t a + b || \ge 0 \\
+\to & (t a + b )^T \cdot ( t a + b ) \ge 0 \\
+\to & t^2 A + 2 t C + B \ge 0 \\
+\to & \frac{C^2}{A} - \frac{2 C^2}{A} \ge -B \ \ \ \  , (t = - \frac{C}{A}) \\
+\to & - C ^2 \ge -A B \\
+\to & C^2 \ge A B \\
+\end{array}
+$$
+
+---
+
+**Claim**: $a, b \in mathbb{R}^n \to |a + b| \le |a| + |b|$
+
+(Triangle Inequality)
+
+Take:
+
+$$
+\begin{array}{l}
+A = \sum a _ i ^ 2 \\
+B = \sum b _ i ^ 2 \\
+C = \sum a _ i b _ i \\
+\to  \\
+|a + b|^2 = A + 2C + B, \\
+(|a| + |b|)^2 = A + 2 \sqrt{A} \sqrt{B} + B, \\
+\end{array}
+$$
+
+$$
+\begin{array}{ll}
+& A + 2C + B \le A + 2 \sqrt{A} \sqrt{B} + B, \ \ \ \ (\text{Cauchy-Swartz}) \\
+\to & |a + b| \le |a| + |b|
+\end{array}
+$$
+
+---
+
 $$
 \begin{align}
 x  _ 0 \le x \le x _ 1 &, \ \ \   x _ 0 , x, x _ 1 \in \mathbb{R} \\
