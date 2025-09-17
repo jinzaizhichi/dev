@@ -54,6 +54,21 @@ Note: The scaling looks to have slowed to about 2.6 years as of 2000.
 
 [Wikipedia](https://en.wikipedia.org/wiki/Koomey%27s_law)
 
+### Lotka's Law
+
+> The frequency of publications in any given field follows a Zipf distribution.
+
+That is, a power law.
+Lotka claimed $k=2$ but this looks to be discipline dependent.
+
+This is stated as publications but works for other disciplines as well,
+such as music recording.
+
+Lotka's law is a better refinement of the idea from Price's law (half of
+published research comes from the square root of total authors).
+
+[Wikipedia](https://en.wikipedia.org/wiki/Lotka%27s_law)
+
 ### Metcalfe's Law
 
 > The effect of a telecommunications network is proportional to the square of the number of connected users of the system.
