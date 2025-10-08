@@ -69,6 +69,18 @@ published research comes from the square root of total authors).
 
 [Wikipedia](https://en.wikipedia.org/wiki/Lotka%27s_law)
 
+
+### The Mary Beard Inversion
+
+> Instead of asking what were the conditions for failure, a better question is sometimes
+> to ask what were the conditions that made it so successful in the first place.
+
+Or, put another way:
+
+> Sometimes prolonged success is the exception rather than the failure
+
+
+
 ### Metcalfe's Law
 
 > The effect of a telecommunications network is proportional to the square of the number of connected users of the system.
