@@ -210,7 +210,7 @@ Chernoff Bound
 ---
 
 $$
-X \ge 0, a > 0
+a > 0
 $$
 
 $$

@@ -133,7 +133,7 @@
 <p>$$ \begin{align} \Pr\{ |X - E[X]| \ge a \} &amp; = \Pr\{ (X - E[X])^2 \ge a^2 \} \\ &amp; \le \frac{E[ (X-E[X])^2 ]}{a^2} \\ &amp; = \frac{\mathrm{Var}[X]}{a^2} \end{align} $$</p>
 <p>By Markov's and the definition of variance.</p>
 <h2 id="chernoff-bound">Chernoff Bound</h2>
-<p>$$ X \ge 0, a &gt; 0 $$</p>
+<p>$$ a &gt; 0 $$</p>
 <p>$$ \Pr\{ X \ge a \} = \Pr\{ e^{tX} \ge e^{ta} \} \le \frac{E[e^{tX}]}{e^{ta}} $$</p>
 <p>$$ \Pr\{ X \ge a \} \le \min_{t&gt;0} \frac{E[e^{tX}]}{e^{ta}} $$</p>
 <p>This can be seen by a straight forward application of Markov's inequality. The parameter $t$ can be chosen to taste.</p>
