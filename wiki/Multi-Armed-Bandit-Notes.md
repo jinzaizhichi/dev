@@ -41,7 +41,7 @@ the reward, $R(k) = \{0,1\}$.
 $$
 \begin{array}{l}
 \theta = ( \theta _ 0, \theta _ 1, \dots, \theta _ {K-1} ) \\
-R( k ) = \left\{
+R( k ) = \left\\{
 \begin{array}{ll}
  1  & \text{w/ prob } \theta _ k \\
  0  & \text{w/ prob } 1-\theta _ k \\
