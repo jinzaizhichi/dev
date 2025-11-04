@@ -52,3 +52,4 @@ dev
 * [Statistical Mechanics for Computer Scientists](Statistical-Mechanics-For-Computer-Scientists.html) 2023-11-12
 * [Javascript Notes](Javascript-Notes.html) 2025-04-09
 * [Complex Analysis in a Nutshell](Complex-Analysis-in-a-Nutshell.html) 2025-04-24
+* [Multi Armed Bandit Notes](Multi-Armed-Bandit-Notes.html) 2025-11-01

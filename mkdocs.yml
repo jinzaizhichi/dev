@@ -52,6 +52,7 @@ nav:
   - "Statistical-Mechanics-For-Computer-Scientists.md"
   - "Javascript-Notes.pdmd"
   - "Complex-Analysis-in-a-Nutshell.md"
+  - "Multi-Armed-Bandit-Notes.md"
 
 docs_dir: 'wiki'
 use_directory_urls: false
