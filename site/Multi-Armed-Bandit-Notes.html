@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>dev blog</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/pygment_trac.css"> -->
+    <link rel="stylesheet" href="css/pygments_style.css">
+
+<!--
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" src="js/MathJax.js"></script>
+-->
+    <!-- <script type="text/javascript" src="{{config.extra.base}}js/MathJax.js?config=TeX-AMS_HTML""></script> -->
+
+  <script>
+  MathJax = {
+    startup : { pageReady: () => {
+      let _r = MathJax.startup.defaultPageReady();
+      //setTimeout(mathjax_ready, 1);
+      return _r;
+    }},
+    loader : { load: [ 'output/svg' ] },
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: {
+      //useGlobalCache: false }
+      fontCache: 'none' }
+      //fontCache: 'global' }
+  };
+  </script>
+
+  <script id='MathJax-script' type='text/javascript' async src='js/mathjax/es5/tex-svg.js'></script>
+
+
+    <script type="text/javascript" src="js/audience-minutes.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header>
+        <h1>Dev Blog</h1>
+
+        <table>
+          <body>
+            <tr><td><a href="./">./dev</a></td></tr>
+           <tr>
+              <td>
+                <br /> <br /> <br />
+                <p><small> Original theme by <a href="https://github.com/orderedlist">orderedlist</a> (CC-BY-SA)</small></p>
+
+                <br />
+                <p>
+                Where applicable, all content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>.
+                <br />
+
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="img/cc-by-sa-80x15.png" /></a>
+                </p>
+              </td>
+            </tr>
+          </body>
+        </table>
+
+      </header>
+      <section>
+
+        <h1 id="multi-armed-bandit-notes">Multi Armed Bandit Notes</h1>
+<p>The canonical setup is that you have $K$ slot machines each with a fixed but unknown probability of winning, $\theta _ k$, with the goal of minimizing regret after $T$ rounds ( $T \in [0,\infty]$ ).</p>
+<p>Some common examples are:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Reward</th>
+<th>Prior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Beta-Bernoulli Bandit</td>
+<td>0 or 1</td>
+<td>Beta distribution</td>
+</tr>
+<tr class="even">
+<td>Gaussian Bandit</td>
+<td>$\mathbb{R}$</td>
+<td>Gaussian</td>
+</tr>
+</tbody>
+</table>
+<p>Some common algorithms are:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$\epsilon$-greedy</td>
+<td>Simple but often not very good</td>
+</tr>
+<tr class="even">
+<td>UCB1</td>
+<td>Good but often perfoms worse than Thompson (?)</td>
+</tr>
+<tr class="odd">
+<td>Thompson Sampling</td>
+<td>Good (?)</td>
+</tr>
+<tr class="even">
+<td>EXP3</td>
+<td>Works in advesarial settings but has ubounded regret by necessity</td>
+</tr>
+</tbody>
+</table>
+<p>Extensions involve assuming delayed feedback, non-stationary systems, and contextual systems.</p>
+<h3 id="regret">Regret</h3>
+<p>$$ \begin{array}{l} \text{regret} _ t (\theta) = \max _ k (\theta _ k - \theta _ {a _ t}) \ \end{array} $$</p>
+<h2 id="bernoulli-bandits-thompson-sampling">Bernoulli Bandits (Thompson Sampling)</h2>
+<p>$K$ bandits, each with a fixed parameter $\theta _ k$ that determines the reward, $R(k) = \{0,1\}$.</p>
+<p>$$ \begin{array}{ll} \theta = ( \theta _ 0, \theta _ 1, \dots, \theta _ {K-1} ) &amp; \\ R( k ) = \left\{ \begin{array}{ll} 1 &amp; \text{w/ prob } \theta _ k \\ 0 &amp; \text{w/ prob } 1-\theta _ k \\ \end{array} \right. &amp; \\ \text{Beta}(x | \alpha, \beta) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)} x^{\alpha-1} (1-\beta)^{\beta-1} &amp; \\ \end{array} $$</p>
+<hr />
+<p>$$ \begin{array}{ll} \text{BernoulliBanditThompsonSampling} &amp; \\ \hline \begin{array}{ll} \text{for } t \in [0,T): &amp; \\ \begin{array}{lll} &amp; \text{for } k \in [0,K): \widehat{\theta} _ k \sim \text{beta}(\alpha _ k, \beta _ k) &amp; \\ &amp; a _ t = \arg\max _ k \widehat{\theta } _ k &amp; \\ &amp; r _ t = R(a _ t) &amp; \\ &amp; \alpha _ k = \alpha _ {a _ t} + r _ t &amp; \\ &amp; \beta _ k = \beta _ {a _ t} + (1-r _ t) &amp; \\ \end{array} \end{array} \end{array} $$</p>
+<h2 id="gaussian-bandits-thompson-sampling">Gaussian Bandits (Thompson Sampling)</h2>
+<p>I guess we have to assume bandits have Gaussian distributions drawn from the prior meta parameters $w _ k = ( m _ k, \nu _ k, \alpha _k , \beta _ k )$, with:</p>
+<p>$$ \begin{array}{ll} m _ k &amp; \equiv \text{ prior mean } \\ \nu _ k &amp; \equiv \text{ prior count } \\ \alpha _ k &amp; \equiv \text{ prior shape } \\ \beta _ k &amp; \equiv \text{ prior scale } \\ \end{array} $$</p>
+<p>Below:</p>
+<p>$$ \begin{array}{ll} N _ t ( k ) &amp; = \sum _ {\tau = 0} ^ {t-1} \mathbb{1} _ {k = a _ \tau} \\ r _ t &amp; = R ( a _ t ) \\ \bar{ x } _ {t,k} &amp; = \frac{1}{N _ t ( k) } \sum _ {\tau = 0} ^ {t-1} \mathbb{1} _ { k = a _ \tau} r _ t \\ s _ {t,k} &amp; = \sum _ {\tau = 0} ^ {t-1} \mathbb{1} _ {k = a _ \tau} ( r _ {\tau} - \bar{x} _ {t,k} ) ^2 \\ \end{array} $$</p>
+<p>So $\bar{x} _ {t,k}$ and $s _ {t,k}$ are the observed mean and variance at time $t$ and bandit $k$, respectively.</p>
+<p>$$ \begin{array}{ll} \text{GaussianBanditThompsonSampling} &amp; \\ \hline \begin{array}{ll} \text{for } t \in [0,T): &amp; \\ \begin{array}{lll} &amp; \text{for } k \in [0,K): &amp; \\ &amp; \begin{array}{llll} &amp; &amp; \widehat{ \sigma } ^ 2 _ k \sim \mathcal{IG}(\frac{1}{2} N_t(k) + \alpha _ k, \beta _ {t,k} ) &amp; \\ &amp; &amp; \widehat{ \mu } _ k \sim \mathcal{N}( \rho _ {t,k}, \frac{ \widehat{\sigma} ^ 2 _ k }{ N _ t ( k) + \nu _ k) } ) &amp; \\ \end{array} &amp; \\ &amp; a _ t = \arg\max _ { k \in [0,K) } \mathbb{E} [ X _ t | \widehat{ \mu } _ k, \widehat{ \sigma } ^ 2 _ k ] = \arg\max _ {k \in [0,K)} \widehat { \mu } _ k &amp; \\ &amp; r _ t = R ( a _ t ) &amp; \\ &amp; N _ {t+1} (a _ t) = N _ t ( a _ t ) + 1 &amp; \\ &amp; \bar{x} _ {t+1,k} = \bar{x} _ {t,k} + \frac{1}{ N _ t(k) + 1} ( X _ t - \bar{x} _ {t,k} ) &amp; \\ &amp; s _ {t + 1, k} = s _ {t,k} + r _ t ^ 2 + N _ t (k) \bar{x} ^ 2 _ {t,k} - N _ {t+1} (k) \bar{x}^2 _ {t+1, k} &amp; \\ &amp; \rho _ {t+1,k} = \frac{ \nu _ k m _ k + N _ {t+1} ( k ) \bar{x} _ {t+1,k} }{ \nu _ k + N _ {t+1} (k) } &amp; \\ &amp; \beta _ { t+1, k } = \beta _ k + \frac{s _ {t+1,k}}{2} + \frac{ N _ {t+1}(k) \nu _ k ( \bar{x} _ {t+1,k} - m _ k) ^2 }{ 2 (N _ {t+1} ( k ) + \nu _k } &amp; \\ \end{array} \end{array} \end{array} $$</p>
+<p>(<a href="https://gertjanvandenburg.com/blog/thompson_sampling/">src</a>, <a href="https://en.wikipedia.org/wiki/Normal-inverse-gamma_distribution">inverse gamma</a>)</p>
+<h2 id="exp3">EXP3</h2>
+<p>$$ \begin{array}{ll} \text{EXP3}(\gamma \in [0,1]) &amp; \\ \hline \begin{array}{ll} \text{for } k \in [0,k): w _ {0,k} = 1 &amp; \\ \text{for } t \in [0,T): &amp; \\ \begin{array}{lll} &amp; \text{for } k \in [0,K): &amp; \\ &amp; \begin{array}{llll} &amp; &amp; p _ {t,k} = (1 - \gamma) \frac{ w _ {t,k} }{ \sum _ {a=0}^{K-1} w _ {t,a} } + \frac{\gamma}{K} &amp; \\ \end{array} &amp; \\ &amp; a _ t \sim (p _ {t,0}, p _ {t,1} , \dots, p _ {t,K-1} ) &amp; \\ &amp; r _ t = R ( a _ t ) &amp; \\ &amp; w _ {t + 1, a _ t} = w _ {t,a _ t} \exp( \gamma r _ t / ( K p _ {t, a _ t} ) ) &amp; \\ \end{array} \end{array} \end{array} $$</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.jeremykun.com/2013/11/08/adversarial-bandits-and-the-exp3-algorithm/">"Adversarial Bandits and the EXP3 Algorithm"</a></li>
+<li><a href="https://www.jeremykun.com/2013/12/09/bandits-and-stocks/">"Bandits and Stocks"</a></li>
+<li><a href="https://gertjanvandenburg.com/blog/thompson_sampling/">"An Exploration of Thompson Sampling"</a></li>
+</ul>
+<h6 id="2025-11-01">2025-11-01</h6>
+
+
+      </section>
+
+      <!--
+      <footer>
+        <p><small> Original theme by <a href="https://github.com/orderedlist">orderedlist</a> (CC-BY-SA)</small></p>
+      </footer>
+      -->
+
+    </div>
+    <script src="js/scale.fix.js"></script>
+  </body
+</html>
