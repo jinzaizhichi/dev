@@ -178,6 +178,31 @@ h
 . ..
 ```
 
+Destructuring
+---
+
+[mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
+
+```
+var a,b, rest;
+[a,b, ...rest] = [1,2,3,4,5];
+console.log(a,b,rest)
+
+var kv = {
+  "lime": 4,
+  "redcurrant": 10,
+  "guava": 5
+};
+var { lime } = kv;
+var { redcurrant: rc, guava: gv } = kv;
+console.log(lime, rc, gv);
+```
+
+```
+1 2 [ 3, 4, 5 ]
+4 10 5
+```
+
 todo
 ---
 

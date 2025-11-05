@@ -128,6 +128,8 @@ $$
 EXP3
 ---
 
+Exponential-weight algorithm for Exploration and Exploitation.
+
 $$
 \begin{array}{ll}
   \text{EXP3}(\gamma \in [0,1]) & \\\\
