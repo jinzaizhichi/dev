@@ -8,6 +8,25 @@
 # work.  If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 #
 
+# I got tired of mkdocs succumbing to bit rot, breaking backwards compatibility
+# and it's byzyintine quirky syntax, so I rolled my own.
+#
+# This uses the same `mkdocs.yml` config file, so should be somewhat compatible
+#
+# The basic workflow is:
+#
+# * read in `mkdocs.yml` into CONFIG data structure
+# * run through article list specified in CONFIG['nav']
+# * for each file, use pandoc to convert to html:
+#   - allowing for "GitHub flavored Markdown", and "Pandoc flavored Markdown",
+#     depending on file extension (`.gfm`, `.md`, `.pdmd`)
+#   - pygments for code styling
+#   - rudimentary templating substitution (hardcoded to be `/dev_theme/base.html` with
+#     `{{page.content}}` keyword)
+# * articles deposited in `site/` directory (ARTICLE_DST_DIR)
+#
+# That's it. Nothing fancy. Use `python -m http.server` in `site/` to test.
+#
 
 
 import re
