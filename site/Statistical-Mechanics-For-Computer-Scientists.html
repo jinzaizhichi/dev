@@ -99,7 +99,7 @@
 <p>We can now define temperature:</p>
 <p>$$ T = \frac{1}{\beta} $$</p>
 <p>And using one of the constraints, we can rewrite equations to get rid of the $\alpha$ term:</p>
-<p>$$ \begin{align} \sum_{i} p_i &amp; = 1 \\ \to \ \ &amp; \sum_{i} e^{ -\beta E_i } = e^{1 + \alpha} \\ \to \ \ &amp; \sum_{i} e^{ \frac{E_i}{T} } = Z(T) \\ \to \ \ &amp; Z(T) = e^{1 + \alpha} \end{align} $$</p>
+<p>$$ \begin{align} \sum_{i} p_i &amp; = 1 \\ \to \ \ &amp; \sum_{i} e^{ -\beta E_i } = e^{1 + \alpha} \\ \to \ \ &amp; \sum_{i} e^{ -\frac{E_i}{T} } = Z(T) \\ \to \ \ &amp; Z(T) = e^{1 + \alpha} \end{align} $$</p>
 <p>Which gives us:</p>
 <p>$$ p_i = \frac{1}{Z(T)} e^{ -\frac{E_i}{T} } $$</p>
 <p>Adding a term, $\kappa$, to $T$ and rewriting the probability as:</p>
@@ -110,7 +110,7 @@
 <hr />
 <h3 id="kullback-leibler-divergence">Kullback-Leibler Divergence</h3>
 <p>We want to talk about free energy but we will need the idea of the Kullback-Leibler divergence first before providing intuition about the free energy definition.</p>
-<p>Consider an optimal encoding of sending $n$ symbols over a channel with the $i$'th symbol occurring with probability $p_i$. We can write the entropy of the distribution $p(\cdot)$ as:</p>
+<p>Consider an optimal encoding of sending $n$ symbols over a channel that has $p _ i$ for the probability that the $i$'th symbol occurs. We can write the entropy of the distribution $p(\cdot)$ as:</p>
 <p>$$ S_p = - \sum_{i}^{n-1} p_i \ln(p_i) $$</p>
 <p>Let's say we introduce another distribution $q(\cdot)$ that we will use to find an encoding/decoding method on the symbols. If the symbols are transmitted at the rate of $p_i$ but we're using $q_i$ to encode/decode them, we end up with (proportionally) $\lg(q_i)$ bits per symbols instead of (proportionally) $\lg(p_i)$ bits per symbol.</p>
 <p>We can write down the entropy of receiving these symbols with probability distribution $p_i$ but using $q_i$ to encode them as:</p>
@@ -133,6 +133,15 @@
 <p>Relating the log of the partition function (number of bits to describe the number of states), modified by temperature, to the average energy minus the entropy.</p>
 <p>For the sake of clarity:</p>
 <p>$$ \begin{align} F_H &amp; = U - TS \\ F_H &amp; = -T \ln(Z) \\ \end{align} $$</p>
+<p>Now, consider the case where we force the partition function, $Z(T)$, to be unity.</p>
+<p>Let's choose $T _ { * }$ s.t. $Z( T _ * ) = 1$. In such a case:</p>
+<p>$$ \begin{array}{ll} &amp; p _ k = e ^ { - \frac{ E _ k }{ T _ * } } \\ \to &amp; - \frac{E _ k}{ T _ * } = \ln(p _ k) \end{array} $$</p>
+<p>We now look at the average energy using $T _ *$:</p>
+<p>$$ \begin{array}{ll} E _ * &amp; = \sum _ k p _ k E _ k \\ &amp; = - T _ * \sum _ k p _ k \ln( p _ k) \\ \to &amp; \frac{ E _ * }{ T _ * } = S \end{array} $$</p>
+<p>Plugging back into the Hemlholtz free energy for the given $T _ *$, we get:</p>
+<p>$$ \begin{array}{ll} F _ { H _ * } &amp; = E _ * - T _ * S \\ &amp; = T _ * S - T _ * S \\ &amp; = 0 \end{array} $$</p>
+<p>Meaning the $\frac{ E _ k }{ T }$ terms essentially act as the $q( \cdot )$ distribution in the Kullback-Leibler encoding above. When $T = T _ *$, this represents an "optimal" encoding, of sorts.</p>
+<p>Put another way, the entropy, $S$, acts as the optimal encoding of the state of the system whereas the energy acts as the potentially "bad guess" at the encoding through an energy assignment of microstates.</p>
 <hr />
 <h3 id="gibbs-free-energy">Gibbs Free Energy</h3>
 <p>If, instead we have a "trial" probability distribution $q_i$ but keep the energies of the microstates, $E_i$, untouched, we get the Gibbs free energy:</p>
@@ -167,7 +176,7 @@
 <p>Call the number of possible transition states from one state to the other $N(\cdot)$:</p>
 <p>$$ \begin{array}{ll} N( s_t \to s_{t+1} ) &amp; \propto N_{s_t} e^{ -\beta ( E_{s_{t+1}} - E_{s_t} ) } \\ N( s_{t+1} \to s_t ) &amp; \propto N_{s_{t+1}} \end{array} $$</p>
 <p>If we assume:</p>
-<p>$$ N_{s_t} &gt; 0, N_{s_{t+1}} &gt; 0 \\ N( s_t \to s_{t+1} ) = N( s_{t+1} \to s_t ) $$</p>
+<p>$$ \begin{array}{l} N_{s_t} &gt; 0, N_{s_{t+1}} &gt; 0 \\ N( s_t \to s_{t+1} ) = N( s_{t+1} \to s_t ) \end{array} $$</p>
 <p>Then:</p>
 <p>$$ \begin{array}{ll} &amp; N( s_t \to s_{t+1} ) - N( s_{t+1} \to s_t ) = N_{s_t} e^{ -\beta ( E_{s_{t+1}} - E_{s_t} ) } - N_{s_{t+1}} \\ \to &amp; 0 = N_{s_t} e^{ -\beta ( E_{s_{t+1}} - E_{s_t} ) } - N_{s_{t+1}} \\ \to &amp; 0 = N_{s_t} ( \frac{ e^{ -\beta E_{s_{t+1}} }}{ e^{ - \beta E_{s_t} } } - \frac{ N_{s_{t+1}} }{ N_{s_t} } ) \\ \to &amp; 0 = \frac{ e^{ -\beta E_{s_{t+1}} }}{ e^{ - \beta E_{s_t} } } - \frac{ N_{s_{t+1}} }{ N_{s_t} } \\ \to &amp; \frac{ N_{s_{t+1}} }{ N_{s_t} } = \frac{ e^{ -\beta E_{s_{t+1}} }}{ e^{ - \beta E_{s_t} } } \\ \to &amp; N_{s_{t+1}} e^{ - \beta E_{s_t} } = N_{s_t} e^{ -\beta E_{s_{t+1}} } \\ \end{array} $$</p>
 <p>Which is a detailed balance condition ensuring it be an ergodic process.</p>

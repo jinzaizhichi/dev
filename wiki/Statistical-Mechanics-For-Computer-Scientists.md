@@ -81,7 +81,7 @@ $$
 \begin{align}
 \sum_{i} p_i & = 1  \\\\
 \to \ \ & \sum_{i} e^{ -\beta E_i } = e^{1 + \alpha} \\\\
-\to \ \ & \sum_{i} e^{ \frac{E_i}{T} } = Z(T) \\\\
+\to \ \ & \sum_{i} e^{ -\frac{E_i}{T} } = Z(T) \\\\
 \to \ \ & Z(T) = e^{1 + \alpha}
 \end{align}
 $$
@@ -115,8 +115,8 @@ We want to talk about free energy but we will need the idea of
 the Kullback-Leibler divergence first before providing intuition about the free energy
 definition.
 
-Consider an optimal encoding of sending $n$ symbols over a channel with the $i$'th symbol
-occurring with probability $p_i$.
+Consider an optimal encoding of sending $n$ symbols over a channel that has $p _ i$
+for the probability that the $i$'th symbol occurs.
 We can write the entropy of the distribution $p(\cdot)$ as:
 
 $$
@@ -208,6 +208,45 @@ F_H & = U - TS \\\\
 F_H & = -T \ln(Z) \\\\
 \end{align}
 $$
+
+Now, consider the case where we force the partition function, $Z(T)$, to be unity.
+
+Let's choose $T _ { * }$ s.t. $Z( T _ * ) = 1$.
+In such a case:
+
+$$
+\begin{array}{ll}
+ & p _ k = e ^ { - \frac{ E _ k }{ T _ * } } \\\\
+\to & - \frac{E _ k}{ T _ * } = \ln(p _ k) 
+\end{array}
+$$
+
+We now look at the average energy using $T _ *$:
+
+$$
+\begin{array}{ll}
+ E _ * & = \sum _ k p _ k E _ k \\\\
+  & = - T _ * \sum _ k p _ k \ln( p _ k) \\\\
+\to & \frac{ E _ * }{ T _ * } = S
+\end{array}
+$$
+
+Plugging back into the Hemlholtz free energy for the given $T _ *$, we get:
+
+$$
+\begin{array}{ll}
+ F _ { H _ * } & = E _ * - T _ * S \\\\
+ & = T _ * S - T _ * S \\\\
+ & = 0
+\end{array}
+$$
+
+Meaning the $\frac{ E _ k }{ T }$ terms essentially act as the $q( \cdot )$ distribution in the
+Kullback-Leibler encoding above.
+When $T = T _ *$, this represents an "optimal" encoding, of sorts.
+
+Put another way, the entropy, $S$, acts as the optimal encoding of the state of the system
+whereas the energy acts as the potentially "bad guess" at the encoding through an energy assignment of microstates.
 
 ---
 
@@ -338,8 +377,10 @@ $$
 If we assume:
 
 $$
+\begin{array}{l}
 N_{s_t} > 0, N_{s_{t+1}} > 0 \\\\
 N( s_t \to s_{t+1} ) = N( s_{t+1} \to s_t )
+\end{array}
 $$
 
 Then:
