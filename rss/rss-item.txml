@@ -1,0 +1,8 @@
+
+      <item>
+        <title><!-- ITEM_TITLE --></title>
+        <link><!-- ITEM_LINK --></link>
+        <description><!-- ITEM_DESCRIPTION --></description>
+        <pubDate><!-- ITEM_PUBDATE --></pubDate>
+        <guid><!-- ITEM_GUID --></guid>
+      </item>
