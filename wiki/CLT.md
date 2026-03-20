@@ -1,6 +1,20 @@
 Central Limit Theorem
 ===
 
+An intuitive argument of the central limit theorem is as follows:
+
+* Consider $n$ independent, $X _ i$, identically distributed random variables with mean 0 and uniform probability density
+  function, $f(x)$, on the interval $[-1/2, 1/2]$
+* The convolution, $X = \sum _ {i=0}^{n-1} X _ i$ turns into multiplication when taking the Fourier transform of the probability density function
+* The Fourier transform of a uniform distribution, $\hat{f}(w)$, is the $sinc(\cdot)$ function which behaves locally around 0 as $(1 - w^2)$
+* The convolution to multiplication means that the product turns into $(1-w^2)^n \sim e^{-n w ^ 2}$
+* The Fourier transform of a Gaussian is again Gaussian, and the result follows
+
+If instead the exponent is taken to be $\alpha$ instead of $2$, $e^{ -n w ^ \alpha}$, with $\alpha \in (0,2]$, a Levy stable distribution results.
+
+
+---
+
 This is a quick proof of the central limit theorem.
 
 The basic idea is as follows:
