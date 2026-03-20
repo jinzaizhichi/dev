@@ -41,9 +41,9 @@ S = & - \sum_{i} p_i \ln(p_i)
 \end{array}
 $$
 
-Where we use $S_{*}$ to differentiate between the entropy defined with $\lg(\cdot)$ instead of $\ln(\cdot)$
+Where we use $S_{*}$ to differentiate between the entropy defined with $\lg(\cdot)$ instead of $\ln(\cdot)$.
 For the derivations below, it's easier to work in natural logarithm ( $\ln (\cdot )$ ) rather than the logarithm
-base 2 ( $\lg(\cdot)$ ) in addition to what is used in the physics literature.
+base 2 ( $\lg(\cdot)$ ).
 The choice of base for the logarithm should only contribute a constant factor and shouldn't take away
 from the broader ideas.
 
@@ -115,12 +115,12 @@ We want to talk about free energy but we will need the idea of
 the Kullback-Leibler divergence first before providing intuition about the free energy
 definition.
 
-Consider an optimal encoding of sending $n$ symbols over a channel that has $p _ i$
-for the probability that the $i$'th symbol occurs.
-We can write the entropy of the distribution $p(\cdot)$ as:
+Consider an optimal encoding of sending $n$ symbols over a channel with $p _ i$
+as the probability the $i$'th symbol occurs.
+We can write the entropy of the distribution, $p(\cdot)$, as:
 
 $$
-S_p = - \sum_{i}^{n-1} p_i \ln(p_i)
+S_p = - \sum_{i=0}^{n-1} p_i \ln(p_i)
 $$
 
 Let's say we introduce another distribution $q(\cdot)$ that we will use to find an encoding/decoding
@@ -133,7 +133,7 @@ We can write down the entropy of receiving these symbols with probability distri
 using $q_i$ to encode them as:
 
 $$
-S_q = - \sum_{i}^{n-1} p_i \ln(q_i)
+S_q = - \sum_{i=0}^{n-1} p_i \ln(q_i)
 $$
 
 The difference, $S_q - S_p$ is
@@ -247,6 +247,8 @@ When $T = T _ *$, this represents an "optimal" encoding, of sorts.
 
 Put another way, the entropy, $S$, acts as the optimal encoding of the state of the system
 whereas the energy acts as the potentially "bad guess" at the encoding through an energy assignment of microstates.
+That is, the Helmholtz free energy gives us the discrepancy between the optimal encoding, $S$, from the
+energy encoding, $E$.
 
 ---
 
