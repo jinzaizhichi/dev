@@ -5,8 +5,8 @@
      <link>https://mechaelephant.com/dev</link>
      <description>Programming, Math, Computer Science</description>
       <language>en-us</language>
-      <pubDate>Fri, 20 Mar 2026 05:49:56 +0000</pubDate>
-      <lastBuildDate>Fri, 20 Mar 2026 05:49:56 +0000</lastBuildDate>
+      <pubDate>Fri, 20 Mar 2026 15:12:58 +0000</pubDate>
+      <lastBuildDate>Fri, 20 Mar 2026 15:12:58 +0000</lastBuildDate>
       <docs>https://www.rssboard.org/rss-specification</docs>
       <!-- <generator>custom </generator> -->
       <!-- <managingEditor>anonymous</managingEditor> -->
@@ -18,7 +18,7 @@
         <title>Textile Cheat Sheet</title>
         <link>https://mechaelephant.com/dev/Textile-Cheat-Sheet.html</link>
         <description>Textile Cheat Sheet</description>
-        <pubDate>2015-10-20</pubDate>
+        <pubDate>Tue, 20 Oct 2015 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Textile-Cheat-Sheet.html</guid>
       </item>
 
@@ -27,7 +27,7 @@
         <title>Image Resize</title>
         <link>https://mechaelephant.com/dev/Image-Resize.html</link>
         <description>Image Resize</description>
-        <pubDate>2015-10-27</pubDate>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Image-Resize.html</guid>
       </item>
 
@@ -36,7 +36,7 @@
         <title>Screenshots Screencasts Animated Gifs</title>
         <link>https://mechaelephant.com/dev/Screenshots-Screencasts-Animated-Gifs.html</link>
         <description>Screenshots Screencasts Animated Gifs</description>
-        <pubDate>2015-11-01</pubDate>
+        <pubDate>Sun, 01 Nov 2015 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Screenshots-Screencasts-Animated-Gifs.html</guid>
       </item>
 
@@ -45,7 +45,7 @@
         <title>ffmpeg notes</title>
         <link>https://mechaelephant.com/dev/ffmpeg-notes.html</link>
         <description>ffmpeg notes</description>
-        <pubDate>2015-11-05</pubDate>
+        <pubDate>Thu, 05 Nov 2015 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/ffmpeg-notes.html</guid>
       </item>
 
@@ -54,7 +54,7 @@
         <title>Unix y notes</title>
         <link>https://mechaelephant.com/dev/Unix-y-notes.html</link>
         <description>Unix y notes</description>
-        <pubDate>2017-05-14</pubDate>
+        <pubDate>Sun, 14 May 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Unix-y-notes.html</guid>
       </item>
 
@@ -63,7 +63,7 @@
         <title>lattice reduction</title>
         <link>https://mechaelephant.com/dev/lattice-reduction.html</link>
         <description>lattice reduction</description>
-        <pubDate>2015-11-30</pubDate>
+        <pubDate>Mon, 30 Nov 2015 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/lattice-reduction.html</guid>
       </item>
 
@@ -72,7 +72,7 @@
         <title>GCode Conversion</title>
         <link>https://mechaelephant.com/dev/GCode-Conversion.html</link>
         <description>GCode Conversion</description>
-        <pubDate>2016-09-19</pubDate>
+        <pubDate>Mon, 19 Sep 2016 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/GCode-Conversion.html</guid>
       </item>
 
@@ -81,7 +81,7 @@
         <title>Git Rename Master</title>
         <link>https://mechaelephant.com/dev/Git-Rename-Master.html</link>
         <description>Git Rename Master</description>
-        <pubDate>2016-09-21</pubDate>
+        <pubDate>Wed, 21 Sep 2016 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Git-Rename-Master.html</guid>
       </item>
 
@@ -90,7 +90,7 @@
         <title>MkDocs Quickstart</title>
         <link>https://mechaelephant.com/dev/MkDocs-Quickstart.html</link>
         <description>MkDocs Quickstart</description>
-        <pubDate>2016-09-28</pubDate>
+        <pubDate>Wed, 28 Sep 2016 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/MkDocs-Quickstart.html</guid>
       </item>
 
@@ -99,7 +99,7 @@
         <title>GPG Notes</title>
         <link>https://mechaelephant.com/dev/GPG-Notes.html</link>
         <description>GPG Notes</description>
-        <pubDate>2017-02-09</pubDate>
+        <pubDate>Thu, 09 Feb 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/GPG-Notes.html</guid>
       </item>
 
@@ -108,7 +108,7 @@
         <title>Git Notes</title>
         <link>https://mechaelephant.com/dev/Git-Notes.html</link>
         <description>Git Notes</description>
-        <pubDate>2017-02-10</pubDate>
+        <pubDate>Fri, 10 Feb 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Git-Notes.html</guid>
       </item>
 
@@ -117,7 +117,7 @@
         <title>Shannon Entropy</title>
         <link>https://mechaelephant.com/dev/Shannon-Entropy.html</link>
         <description>Shannon Entropy</description>
-        <pubDate>2017-06-12</pubDate>
+        <pubDate>Mon, 12 Jun 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Shannon-Entropy.html</guid>
       </item>
 
@@ -126,7 +126,7 @@
         <title>Enabling Server HTTPS</title>
         <link>https://mechaelephant.com/dev/Enabling-Server-HTTPS.html</link>
         <description>Enabling Server HTTPS</description>
-        <pubDate>2017-06-12</pubDate>
+        <pubDate>Mon, 12 Jun 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Enabling-Server-HTTPS.html</guid>
       </item>
 
@@ -135,7 +135,7 @@
         <title>BGZF Example</title>
         <link>https://mechaelephant.com/dev/BGZF-Example.html</link>
         <description>BGZF Example</description>
-        <pubDate>2017-06-12</pubDate>
+        <pubDate>Mon, 12 Jun 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/BGZF-Example.html</guid>
       </item>
 
@@ -144,7 +144,7 @@
         <title>Kelly Criterion</title>
         <link>https://mechaelephant.com/dev/Kelly-Criterion.html</link>
         <description>Kelly Criterion</description>
-        <pubDate>2017-08-18</pubDate>
+        <pubDate>Fri, 18 Aug 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Kelly-Criterion.html</guid>
       </item>
 
@@ -153,7 +153,7 @@
         <title>C Project Template</title>
         <link>https://mechaelephant.com/dev/C-Project-Template.html</link>
         <description>C Project Template</description>
-        <pubDate>2017-08-05</pubDate>
+        <pubDate>Sat, 05 Aug 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/C-Project-Template.html</guid>
       </item>
 
@@ -162,7 +162,7 @@
         <title>Project Organization</title>
         <link>https://mechaelephant.com/dev/Project-Organization.html</link>
         <description>Project Organization</description>
-        <pubDate>2017-08-05</pubDate>
+        <pubDate>Sat, 05 Aug 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Project-Organization.html</guid>
       </item>
 
@@ -171,7 +171,7 @@
         <title>File Naming Conventions</title>
         <link>https://mechaelephant.com/dev/File-Naming-Conventions.html</link>
         <description>File Naming Conventions</description>
-        <pubDate>2017-08-18</pubDate>
+        <pubDate>Fri, 18 Aug 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/File-Naming-Conventions.html</guid>
       </item>
 
@@ -180,7 +180,7 @@
         <title>Command Line Option Loose Standard</title>
         <link>https://mechaelephant.com/dev/Command-Line-Option-Loose-Standard.html</link>
         <description>Command Line Option Loose Standard</description>
-        <pubDate>2017-12-25</pubDate>
+        <pubDate>Mon, 25 Dec 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Command-Line-Option-Loose-Standard.html</guid>
       </item>
 
@@ -189,7 +189,7 @@
         <title>PCB Notes</title>
         <link>https://mechaelephant.com/dev/PCB-Notes.html</link>
         <description>PCB Notes</description>
-        <pubDate>2018-02-03</pubDate>
+        <pubDate>Sat, 03 Feb 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/PCB-Notes.html</guid>
       </item>
 
@@ -198,7 +198,7 @@
         <title>Coding Style</title>
         <link>https://mechaelephant.com/dev/Coding-Style.html</link>
         <description>Coding Style</description>
-        <pubDate>2018-02-17</pubDate>
+        <pubDate>Sat, 17 Feb 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Coding-Style.html</guid>
       </item>
 
@@ -207,7 +207,7 @@
         <title>Energy Consumption Stats</title>
         <link>https://mechaelephant.com/dev/Energy-Consumption-Stats.html</link>
         <description>Energy Consumption Stats</description>
-        <pubDate>2017-09-21</pubDate>
+        <pubDate>Thu, 21 Sep 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Energy-Consumption-Stats.html</guid>
       </item>
 
@@ -216,7 +216,7 @@
         <title>Simple Sum</title>
         <link>https://mechaelephant.com/dev/Simple-Sum.html</link>
         <description>Simple Sum</description>
-        <pubDate>2018-05-25</pubDate>
+        <pubDate>Fri, 25 May 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Simple-Sum.html</guid>
       </item>
 
@@ -225,7 +225,7 @@
         <title>Fisher Yates Shuffle</title>
         <link>https://mechaelephant.com/dev/Fisher-Yates-Shuffle.html</link>
         <description>Fisher Yates Shuffle</description>
-        <pubDate>2018-06-13</pubDate>
+        <pubDate>Wed, 13 Jun 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Fisher-Yates-Shuffle.html</guid>
       </item>
 
@@ -234,7 +234,7 @@
         <title>Halting Problem</title>
         <link>https://mechaelephant.com/dev/Halting-Problem.html</link>
         <description>Halting Problem</description>
-        <pubDate>2018-06-13</pubDate>
+        <pubDate>Wed, 13 Jun 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Halting-Problem.html</guid>
       </item>
 
@@ -243,7 +243,7 @@
         <title>Assorted Small Probability Problems</title>
         <link>https://mechaelephant.com/dev/Assorted-Small-Probability-Problems.html</link>
         <description>Assorted Small Probability Problems</description>
-        <pubDate>2018-06-29</pubDate>
+        <pubDate>Fri, 29 Jun 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Assorted-Small-Probability-Problems.html</guid>
       </item>
 
@@ -252,7 +252,7 @@
         <title>Probability Notes</title>
         <link>https://mechaelephant.com/dev/Probability-Notes.html</link>
         <description>Probability Notes</description>
-        <pubDate>2018-08-04</pubDate>
+        <pubDate>Sat, 04 Aug 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Probability-Notes.html</guid>
       </item>
 
@@ -261,7 +261,7 @@
         <title>Amdahls Law</title>
         <link>https://mechaelephant.com/dev/Amdahls-Law.html</link>
         <description>Amdahls Law</description>
-        <pubDate>2018-09-03</pubDate>
+        <pubDate>Mon, 03 Sep 2018 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Amdahls-Law.html</guid>
       </item>
 
@@ -270,7 +270,7 @@
         <title>Is It Really Open</title>
         <link>https://mechaelephant.com/dev/Is-It-Really-Open.html</link>
         <description>Is It Really Open</description>
-        <pubDate>2019-01-10</pubDate>
+        <pubDate>Thu, 10 Jan 2019 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Is-It-Really-Open.html</guid>
       </item>
 
@@ -279,7 +279,7 @@
         <title>Number Theory Notes</title>
         <link>https://mechaelephant.com/dev/Number-Theory-Notes.html</link>
         <description>Number Theory Notes</description>
-        <pubDate>2019-01-10</pubDate>
+        <pubDate>Thu, 10 Jan 2019 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Number-Theory-Notes.html</guid>
       </item>
 
@@ -288,7 +288,7 @@
         <title>Arbitrary Binary Functions</title>
         <link>https://mechaelephant.com/dev/Arbitrary-Binary-Functions.html</link>
         <description>Arbitrary Binary Functions</description>
-        <pubDate>2019-01-10</pubDate>
+        <pubDate>Thu, 10 Jan 2019 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Arbitrary-Binary-Functions.html</guid>
       </item>
 
@@ -297,7 +297,7 @@
         <title>Empirical Laws</title>
         <link>https://mechaelephant.com/dev/Empirical-Laws.html</link>
         <description>Empirical Laws</description>
-        <pubDate>2019-03-18</pubDate>
+        <pubDate>Mon, 18 Mar 2019 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Empirical-Laws.html</guid>
       </item>
 
@@ -306,7 +306,7 @@
         <title>Food CO2 Water</title>
         <link>https://mechaelephant.com/dev/Food-CO2-Water.html</link>
         <description>Food CO2 Water</description>
-        <pubDate>2019-04-02</pubDate>
+        <pubDate>Tue, 02 Apr 2019 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Food-CO2-Water.html</guid>
       </item>
 
@@ -315,7 +315,7 @@
         <title>SSH Recipes</title>
         <link>https://mechaelephant.com/dev/SSH-Recipes.html</link>
         <description>SSH Recipes</description>
-        <pubDate>2019-09-24</pubDate>
+        <pubDate>Tue, 24 Sep 2019 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/SSH-Recipes.html</guid>
       </item>
 
@@ -324,7 +324,7 @@
         <title>Future Predictions</title>
         <link>https://mechaelephant.com/dev/Future-Predictions.html</link>
         <description>Future Predictions</description>
-        <pubDate>2021-04-27</pubDate>
+        <pubDate>Tue, 27 Apr 2021 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Future-Predictions.html</guid>
       </item>
 
@@ -333,7 +333,7 @@
         <title>Diophantine Approximation</title>
         <link>https://mechaelephant.com/dev/Diophantine-Approximation.html</link>
         <description>Diophantine Approximation</description>
-        <pubDate>2020-05-22</pubDate>
+        <pubDate>Fri, 22 May 2020 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Diophantine-Approximation.html</guid>
       </item>
 
@@ -342,7 +342,7 @@
         <title>GCode Common</title>
         <link>https://mechaelephant.com/dev/GCode-Common.html</link>
         <description>GCode Common</description>
-        <pubDate>2020-09-09</pubDate>
+        <pubDate>Wed, 09 Sep 2020 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/GCode-Common.html</guid>
       </item>
 
@@ -351,7 +351,7 @@
         <title>Misc Math</title>
         <link>https://mechaelephant.com/dev/Misc-Math.html</link>
         <description>Misc Math</description>
-        <pubDate>2021-08-30</pubDate>
+        <pubDate>Mon, 30 Aug 2021 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Misc-Math.html</guid>
       </item>
 
@@ -360,7 +360,7 @@
         <title>Socio Economic Definitions</title>
         <link>https://mechaelephant.com/dev/Socio-Economic-Definitions.html</link>
         <description>Socio Economic Definitions</description>
-        <pubDate>2020-11-02</pubDate>
+        <pubDate>Mon, 02 Nov 2020 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Socio-Economic-Definitions.html</guid>
       </item>
 
@@ -369,7 +369,7 @@
         <title>Bitcoin Moon Math</title>
         <link>https://mechaelephant.com/dev/Bitcoin-Moon-Math.html</link>
         <description>Bitcoin Moon Math</description>
-        <pubDate>2017-12-06</pubDate>
+        <pubDate>Wed, 06 Dec 2017 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Bitcoin-Moon-Math.html</guid>
       </item>
 
@@ -378,7 +378,7 @@
         <title>Energy Discussion</title>
         <link>https://mechaelephant.com/dev/Energy-Discussion.html</link>
         <description>Energy Discussion</description>
-        <pubDate>2021-04-24</pubDate>
+        <pubDate>Sat, 24 Apr 2021 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Energy-Discussion.html</guid>
       </item>
 
@@ -387,7 +387,7 @@
         <title>AWK Cheatsheet.pdmd</title>
         <link>https://mechaelephant.com/dev/AWK-Cheatsheet.pdmd</link>
         <description>AWK Cheatsheet.pdmd</description>
-        <pubDate>2021-10-01</pubDate>
+        <pubDate>Fri, 01 Oct 2021 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/AWK-Cheatsheet.pdmd</guid>
       </item>
 
@@ -396,7 +396,7 @@
         <title>Littlewood Polynomials Notes</title>
         <link>https://mechaelephant.com/dev/Littlewood-Polynomials-Notes.html</link>
         <description>Littlewood Polynomials Notes</description>
-        <pubDate>2022-01-20</pubDate>
+        <pubDate>Thu, 20 Jan 2022 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Littlewood-Polynomials-Notes.html</guid>
       </item>
 
@@ -405,7 +405,7 @@
         <title>Useful Tables</title>
         <link>https://mechaelephant.com/dev/Useful-Tables.html</link>
         <description>Useful Tables</description>
-        <pubDate>2022-08-09</pubDate>
+        <pubDate>Tue, 09 Aug 2022 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Useful-Tables.html</guid>
       </item>
 
@@ -414,7 +414,7 @@
         <title>Belief Propagation</title>
         <link>https://mechaelephant.com/dev/Belief-Propagation.html</link>
         <description>Belief Propagation</description>
-        <pubDate>2022-08-16</pubDate>
+        <pubDate>Tue, 16 Aug 2022 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Belief-Propagation.html</guid>
       </item>
 
@@ -423,7 +423,7 @@
         <title>Puzzle Ribbon Tiles</title>
         <link>https://mechaelephant.com/dev/Puzzle-Ribbon-Tiles.html</link>
         <description>Puzzle Ribbon Tiles</description>
-        <pubDate>2023-03-31</pubDate>
+        <pubDate>Fri, 31 Mar 2023 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Puzzle-Ribbon-Tiles.html</guid>
       </item>
 
@@ -432,7 +432,7 @@
         <title>Kullback Leibler Divergence</title>
         <link>https://mechaelephant.com/dev/Kullback-Leibler-Divergence.html</link>
         <description>Kullback Leibler Divergence</description>
-        <pubDate>2023-08-22</pubDate>
+        <pubDate>Tue, 22 Aug 2023 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Kullback-Leibler-Divergence.html</guid>
       </item>
 
@@ -441,7 +441,7 @@
         <title>Statistical Mechanics For Computer Scientists</title>
         <link>https://mechaelephant.com/dev/Statistical-Mechanics-For-Computer-Scientists.html</link>
         <description>Statistical Mechanics For Computer Scientists</description>
-        <pubDate>2023-11-12</pubDate>
+        <pubDate>Sun, 12 Nov 2023 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Statistical-Mechanics-For-Computer-Scientists.html</guid>
       </item>
 
@@ -450,7 +450,7 @@
         <title>Javascript Notes.pdmd</title>
         <link>https://mechaelephant.com/dev/Javascript-Notes.pdmd</link>
         <description>Javascript Notes.pdmd</description>
-        <pubDate>2025-04-09</pubDate>
+        <pubDate>Wed, 09 Apr 2025 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Javascript-Notes.pdmd</guid>
       </item>
 
@@ -459,7 +459,7 @@
         <title>Complex Analysis in a Nutshell</title>
         <link>https://mechaelephant.com/dev/Complex-Analysis-in-a-Nutshell.html</link>
         <description>Complex Analysis in a Nutshell</description>
-        <pubDate>2025-05-24</pubDate>
+        <pubDate>Sat, 24 May 2025 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Complex-Analysis-in-a-Nutshell.html</guid>
       </item>
 
@@ -468,7 +468,7 @@
         <title>Multi Armed Bandit Notes</title>
         <link>https://mechaelephant.com/dev/Multi-Armed-Bandit-Notes.html</link>
         <description>Multi Armed Bandit Notes</description>
-        <pubDate>2025-11-01</pubDate>
+        <pubDate>Sat, 01 Nov 2025 00:00:00 UTC</pubDate>
         <guid>https://mechaelephant.com/dev/Multi-Armed-Bandit-Notes.html</guid>
       </item>
 

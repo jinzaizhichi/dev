@@ -67,6 +67,14 @@ for a in CONFIG_DATA["nav"]:
     _article_date = _m.group(0)
     _article_date = re.sub( '###### ', '', _article_date)
 
+    _dg = re.search( '(\d{4}).(\d{2}).(\d{2})', _article_date)
+    if _dg:
+      _yr_s = _dg.group(1)
+      _mo_s = _dg.group(2)
+      _dy_s = _dg.group(3)
+      _dt = datetime.datetime( int(_yr_s), int(_mo_s), int(_dy_s) )
+      _article_date = _dt.strftime("%a, %d %b %Y 00:00:00 UTC")
+
   _url = RSS_VAR["LINK"] + "/" + re.sub('\.md', '.html', a)
   _title = re.sub('\.md', '', re.sub( '-', ' ', a))
 
