@@ -86,7 +86,7 @@
 <p>The state $i$ is often called a "microstate". If we have a set of microstates and start out with assigning each of them energies, rather than probabilities, under suitable conditions, we can derive a probability for each microstate.</p>
 <p>If we assume each microstate has an energy, $E_i$, attached to it, we can write down some equations:</p>
 <p>$$ \begin{array}{ll} 1 = &amp; \sum_{i} p_i \\ E = &amp; \sum_{i} p_i E_i \\ S = &amp; - \sum_{i} p_i \ln(p_i) \end{array} $$</p>
-<p>Where we use $S_{*}$ to differentiate between the entropy defined with $\lg(\cdot)$ instead of $\ln(\cdot)$ For the derivations below, it's easier to work in natural logarithm ( $\ln (\cdot )$ ) rather than the logarithm base 2 ( $\lg(\cdot)$ ) in addition to what is used in the physics literature. The choice of base for the logarithm should only contribute a constant factor and shouldn't take away from the broader ideas.</p>
+<p>Where we use $S_{*}$ to differentiate between the entropy defined with $\lg(\cdot)$ instead of $\ln(\cdot)$. For the derivations below, it's easier to work in natural logarithm ( $\ln (\cdot )$ ) rather than the logarithm base 2 ( $\lg(\cdot)$ ). The choice of base for the logarithm should only contribute a constant factor and shouldn't take away from the broader ideas.</p>
 <p>In the above, we make a few assumptions:</p>
 <ul>
 <li>Each of the microstate energies, $E_i$, is fixed and unchanging</li>
@@ -110,11 +110,11 @@
 <hr />
 <h3 id="kullback-leibler-divergence">Kullback-Leibler Divergence</h3>
 <p>We want to talk about free energy but we will need the idea of the Kullback-Leibler divergence first before providing intuition about the free energy definition.</p>
-<p>Consider an optimal encoding of sending $n$ symbols over a channel that has $p _ i$ for the probability that the $i$'th symbol occurs. We can write the entropy of the distribution $p(\cdot)$ as:</p>
-<p>$$ S_p = - \sum_{i}^{n-1} p_i \ln(p_i) $$</p>
+<p>Consider an optimal encoding of sending $n$ symbols over a channel with $p _ i$ as the probability the $i$'th symbol occurs. We can write the entropy of the distribution, $p(\cdot)$, as:</p>
+<p>$$ S_p = - \sum_{i=0}^{n-1} p_i \ln(p_i) $$</p>
 <p>Let's say we introduce another distribution $q(\cdot)$ that we will use to find an encoding/decoding method on the symbols. If the symbols are transmitted at the rate of $p_i$ but we're using $q_i$ to encode/decode them, we end up with (proportionally) $\lg(q_i)$ bits per symbols instead of (proportionally) $\lg(p_i)$ bits per symbol.</p>
 <p>We can write down the entropy of receiving these symbols with probability distribution $p_i$ but using $q_i$ to encode them as:</p>
-<p>$$ S_q = - \sum_{i}^{n-1} p_i \ln(q_i) $$</p>
+<p>$$ S_q = - \sum_{i=0}^{n-1} p_i \ln(q_i) $$</p>
 <p>The difference, $S_q - S_p$ is how "bad" the $q_i$ encoding is in terms of how many extra bits we waste using the $q_i$ encoding. If we introduce more notation:</p>
 <p>$$ \begin{align} S_q - S_p &amp; = - [ \sum _ i p _ i \ln(q _ i) - \sum _ i p _ i \ln(p _ i) ] \\ \to D_{KL}(p || q) &amp; \stackrel{\text{def}}{=} \sum _ i p _ i \ln( \frac{p _ i}{q _ i} ) \end{align} $$</p>
 <p>Which is called the Kullback-Leibler Divergence.</p>
@@ -141,7 +141,7 @@
 <p>Plugging back into the Hemlholtz free energy for the given $T _ *$, we get:</p>
 <p>$$ \begin{array}{ll} F _ { H _ * } &amp; = E _ * - T _ * S \\ &amp; = T _ * S - T _ * S \\ &amp; = 0 \end{array} $$</p>
 <p>Meaning the $\frac{ E _ k }{ T }$ terms essentially act as the $q( \cdot )$ distribution in the Kullback-Leibler encoding above. When $T = T _ *$, this represents an "optimal" encoding, of sorts.</p>
-<p>Put another way, the entropy, $S$, acts as the optimal encoding of the state of the system whereas the energy acts as the potentially "bad guess" at the encoding through an energy assignment of microstates.</p>
+<p>Put another way, the entropy, $S$, acts as the optimal encoding of the state of the system whereas the energy acts as the potentially "bad guess" at the encoding through an energy assignment of microstates. That is, the Helmholtz free energy gives us the discrepancy between the optimal encoding, $S$, from the energy encoding, $E$.</p>
 <hr />
 <h3 id="gibbs-free-energy">Gibbs Free Energy</h3>
 <p>If, instead we have a "trial" probability distribution $q_i$ but keep the energies of the microstates, $E_i$, untouched, we get the Gibbs free energy:</p>
