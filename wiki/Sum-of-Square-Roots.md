@@ -7,8 +7,8 @@ The sum of square roots problem is:
 $$
 \begin{align}
  n, m \in \mathbb{Z} \\
- a_j, b_k \in \mathbb{Z} \\
- \sum_j^{n-1} \sqrt a_j =? \sum_k^{m-1} \sqrt b_k
+ a _ j, b _ k \in \mathbb{Z} \\
+ \sum _ j^{n-1} \sqrt a _ j =? \sum _ k^{m-1} \sqrt b _ k
 \end{align}
 $$
 
@@ -22,7 +22,7 @@ $$
 
 $$
 \begin{align}
-\frac{\int_{-\pi}^{\pi} e^{i u \theta} d\theta}{2 \pi} = 
+\frac{\int _ {-\pi}^{\pi} e^{i u \theta} d\theta}{2 \pi} = 
 \begin{cases}
 1 & u \ne 0 \\
 0 & u = 0
@@ -31,11 +31,11 @@ $$
 $$
 
 
-For $ a_k \in \mathbb{Z} $,
+For $a _ k \in \mathbb{Z}$,
 
 $$
 \begin{align}
-\frac{1}{2 \pi} \int_{-\pi}^{\pi} \prod_k^{n-1} ( e^{-a_k i \theta}  + e^{a_k i \theta} ) d\theta = 
+\frac{1}{2 \pi} \int _ {-\pi}^{\pi} \prod _ k^{n-1} ( e^{-a _ k i \theta}  + e^{a _ k i \theta} ) d\theta = 
 \begin{cases}
 0 & \text{no partition} \\
 !0 & \text{at least one partition}
