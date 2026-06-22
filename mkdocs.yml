@@ -53,6 +53,7 @@ nav:
   - "Javascript-Notes.pdmd"
   - "Complex-Analysis-in-a-Nutshell.md"
   - "Multi-Armed-Bandit-Notes.md"
+  - "lisp-lessons-learned.md"
 
 docs_dir: 'wiki'
 use_directory_urls: false

@@ -53,3 +53,4 @@ dev
 * [Javascript Notes](Javascript-Notes.html) 2025-04-09
 * [Complex Analysis in a Nutshell](Complex-Analysis-in-a-Nutshell.html) 2025-04-24
 * [Multi Armed Bandit Notes](Multi-Armed-Bandit-Notes.html) 2025-11-01
+* [Developing a LISP interpreter: Lessons Learned](lisp-lessons-learned.html) 2026-06-21

@@ -355,7 +355,7 @@ In my opinion, each of these ideas are incorrect in various ways.
 I don't ascribe to [linguistic determinism](https://en.wikipedia.org/wiki/Linguistic_determinism).
 Many non-trivial problems that Lisp solves are ones that the constraints of the language invent in the first place.
 Any insight into problem structure that can be claimed from Lisp can most likely be explained by imposing a tree structure,
-independence or using introspection ("code-as-data and vice versa") idea.
+independence or using an introspection ("code-as-data and vice versa") idea.
 These are paradigms that have been expressed in many other areas before and I've never been impressed with Lisp
 providing any fundamental new insight.
 
