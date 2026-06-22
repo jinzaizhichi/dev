@@ -110,8 +110,9 @@ parent and the parent environment adding it as a child.
 
 When looking up a variable, the environment's implied tree is traversed from the current environment
 up through the chain of parents.
-The traversal continues until it either finds the named entry or reaches an undefined parent, indicating the
-root environment was reached without finding the lookup resulting in an error.
+The traversal continues until it either finds the named entry or reaches an undefined parent.
+If it reaches an undefined parent, this means the variable doesn't exist within scope
+and an error is returned.
 
 Lambda's, when created, have an additional `env` element that is populated with the current environment
 from when they were created.
@@ -202,9 +203,12 @@ Parameters to the Lambda are evaluated in the calling environment using `_child_
 The evaluation of the parameters is added to the local environment where the
 local environment is taken from `u.env`, the environment at *declaration*.
 
-The `_local_env` is then used in `_eval( _proc, _local_env)`, so that the evaluation
-occurs with the environment relative to the Lambda declaration, with the new parameters
-added.
+The `_local_env`, the environment for the lambda at *declaration*,
+is then used in `_eval( _proc, _local_env)`, so that the evaluation
+occurs with the environment relative to the Lambda declaration.
+Parameters to the lambda have been added to the `_local_env` but, again,
+have been evaluated with the environment at the *calling* point (not
+at the *declaration* point of the lambda).
 
 More succinctly:
 
@@ -216,7 +220,7 @@ More succinctly:
 In some sense, the environment is a pretty simple concept, but there are (in my opinion)
 some hidden subtleties to get it right.
 
-Environments are pretty much a straight tree, with entries the evaluated values and
+Environments are pretty much a standard tree, with entries the evaluated values and
 pointers to the parent and children, so all the standard tree traversal mechanics
 apply when looking up, adding and removing (if need be).
 Understanding how to use the environment relative to the AST is the subtlety.
@@ -262,10 +266,9 @@ More of a wishy-washy lesson, but for some reason I got hung up on
 implementing a Lisp interpreter "the right way".
 There is no right way.
 
-My Lisp interpreter is janky, has many rough edges, is difficult to use, understand
-and has a host of other problems but it is a Lisp interpreter.
-I can do processing, implement functions and, in my mind the certificate of authenticity,
-implement the Y combinator:
+My Lisp interpreter is janky, has many rough edges, is difficult to use, difficult to understand
+and has a host of other problems, but it *is* a Lisp interpreter.
+I can do processing, implement functions and even implement a Y combinator:
 
 ```
 ;(d Y
@@ -369,6 +372,11 @@ main critiques I have:
 * There's a deeper desire to debilitate Turing machine equivalence to provide provably terminating computation
   and I suspect that the strength of computations that we typically want to do is deeply tied to being Turing machine
   equivalent
+
+To the first point, an even more trivial and reductive argument is that, since Lisp is Turing machine equivalent, we
+can implement whatever language we want, which can have as many side effects as we want.
+Maybe a better argument is that Lisp guides people to a template of thought that suggests separation of side effects and
+can be more easily used to reason about programs.
 
 My feeling is that for the tasks we typically want to do, it's easier to start from Turing machine equivalence and then back
 into provably terminating behavior than to start from an incapacitated Turing machine and then hope that the additions we

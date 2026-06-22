@@ -1,0 +1,21 @@
+personal_ws-1.1 en 20 
+AST
+DSL
+Eval
+GCode
+JSON
+Norvig
+Norvig's
+Tokenization
+UUIDs
+combinator
+dcc
+effectful
+janky
+js
+loc
+lookups
+lsp
+pre
+tokenization
+wishy
