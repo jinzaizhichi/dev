@@ -20,7 +20,7 @@ and the [Y combinator](https://8dcc.github.io/programming/understanding-y-combin
 The most useful operations are:
 
 | op | description | example |
-|---|---|
+|---|---|---|
 | `+`,`-`,`/`,`*` | Plus, minus, divide, multiplication, respectively | `(+ 3 4)` |
 | `d` | Definition | `(d x 1)` |
 | `f` | Function definition (Lambda)| `(f (x) (+ x 1))` |
