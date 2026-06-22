@@ -380,8 +380,9 @@ Another way to say that is Turing machine equivalence is the norm, not the excep
 machine equivalence.
 One has to work even harder to have a system that's not Turing machine equivalent that still does useful work.
 
-It might be my naivete but it's clear that Lisp and the related Lambda calculus are Turing machine equivalent, including
-prizing the introspection idea, so using this as a basis side-effect free ideology seems hypocritical.
+It might be my naivete but 
+using Lisp as a basis side-effect free ideology seems hypocritical
+as Lisp, and the related Lambda calculus, are Turing machine equivalent.
 
 Lisp does offer a way to implement a succinct implementation of a powerful language.
 Lisp has been around since the 1960s with the ability to run on hardware throughout the history of personal computing.
