@@ -356,7 +356,7 @@ I don't ascribe to [linguistic determinism](https://en.wikipedia.org/wiki/Lingui
 Many non-trivial problems that Lisp solves are ones that the constraints of the language invent in the first place.
 Any insight into problem structure that can be claimed from Lisp can most likely be explained by imposing a tree structure,
 independence or using introspection ("code-as-data and vice versa") idea.
-These are paradigms that have been expressed in many other contexts before and I've never been impressed with Lisp
+These are paradigms that have been expressed in many other areas before and I've never been impressed with Lisp
 providing any fundamental new insight.
 
 In terms of independence and side effects, while I can see the utility of side effect free computation, there are two
