@@ -290,15 +290,10 @@ I can do processing, implement functions and even implement a Y combinator:
 (d factorio (Y fg))
 (factorio 5)
 ```
-
-My implementation is probably very inefficient, is clunky in a lot of ways
-and is heavily focused on returning one or two types (numbers and/or symbols/functions)
-but as a proof of concept for myself to have a working implementation, it works.
-
 I process lists as the fundamental object, relying on the evaluated tokens
 to know how to process the latter elements of the list.
 Knowing which environment to create or use in this context can be a little confusing
-because there's this layer of indirection where I return a function type, say
+because there's this layer of indirection where I return a function type, say,
 but then only process it as a function in the evaluation level that's processing
 the array.
 
@@ -317,7 +312,7 @@ tried to implement it in a way that made sense to me, even if it was clunky.
 ### Visualization
 
 This is more of a general idea that I try to implement in my projects but
-visualization, for me, is key to understanding.
+visualization, for me, helps understanding.
 
 I rarely get things working on the first try and debugging becomes difficult
 when there are many environments, branches and other context queues that need
@@ -325,7 +320,7 @@ to be interpreted.
 Often, in this project and others, there needs to be a certain base complexity
 before bugs show up or features are stressed.
 
-In order to help debugging, visualization is key.
+In order to help debugging, visualization is helpful.
 For this project it was as simple as creating custom printing statements that showed
 the environment stack (with custom UUIDs), AST and other information.
 
@@ -338,7 +333,7 @@ Editorial
 ---
 
 I try to have a general policy of not shit-posting, so this section might be a violation
-of that idea, but I hope there's enough good faith ideas to make it worth while.
+of that idea.
 
 I had previously considered Lisp to be an over-hyped language.
 I believe this was mostly in response to the benefits people claimed it gave.
@@ -357,7 +352,7 @@ My interpretation of the main points are:
 
 In my opinion, each of these ideas are incorrect in various ways.
 
-I don't ascribe to any sort of strong form of [linguistic relativity](https://en.wikipedia.org/wiki/Linguistic_relativity).
+I don't ascribe to [linguistic determinism](https://en.wikipedia.org/wiki/Linguistic_determinism).
 Many non-trivial problems that Lisp solves are ones that the constraints of the language invent in the first place.
 Any insight into problem structure that can be claimed from Lisp can most likely be explained by imposing a tree structure,
 independence or using introspection ("code-as-data and vice versa") idea.
