@@ -315,7 +315,7 @@ This is more of a general idea that I try to implement in my projects but
 visualization, for me, helps understanding.
 
 I rarely get things working on the first try and debugging becomes difficult
-when there are many environments, branches and other context queues that need
+when there are many environments, branches and other context clues that need
 to be interpreted.
 Often, in this project and others, there needs to be a certain base complexity
 before bugs show up or features are stressed.
