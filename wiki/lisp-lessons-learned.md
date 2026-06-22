@@ -390,22 +390,17 @@ My feeling is that the ease of implementation and ubiquity of availability has b
 like people's bias towards the virtues of their first learned programming language.
 I find Lisp clunky and difficult to do complex tasks in and so I think a large part of why some people are Lisp
 advocates is their "first language bias".
-They see the potential but can never quite realize it.
+My ungenerous view is that people who are Lisp zealots see the potential but can never quite realize it.
 
 In particular, AI research in past decades used to be heavily focused on Lisp like languages.
 I believe Lisp has its benefits but I think it's clear that any good ideas Lisp has can be easily
 transferred to other domains and that Lisp offers little power over other methods for AI research.
 
-Even the Y combinator idea seems like a historical vestige of a mathematical though pattern prevalent over a century ago.
-I don't want to be unkind and maybe part of the reason why we consider introspection and Turing machine equivalence
+Even the Y combinator idea seems like a historical vestige of a mathematical basis prevalent over a century ago.
+I don't want to be unkind, and maybe part of the reason why we consider introspection and Turing machine equivalence
 as such basic and ubiquitous objects is precisely because of this research, but, in my opinion,
 understanding the Y combinator or the other subtleties of Lambda calculus have done little to move
-forward AI research, computing or deeper insight into complexity.
-
-The above are the many reasons I've shied away from using or implement Lisp.
-I've implemented other language interpreters (e.g. GCode) but never one that
-I would consider a "proper" language and certainly not one that has introspection
-as a first class idea.
+forward AI research, computing or provide deeper insight into complexity.
 
 In some sense, the very reason I didn't like Lisp in the first place is the reason
 why it's so enlightening.
@@ -421,7 +416,6 @@ The focus on environments was, alone, worth the time to implement it.
 The above does sound pretty negative and I'm not sure if it's worth saying.
 I don't feel strongly about my critiques, especially now that AI research is progressing
 so quickly, and I can see many benefits from the ideas that Lisp has to offer.
-I have to stop myself from becoming enamored by Lisp because I know how clunky it is to use.
 
 
 References
