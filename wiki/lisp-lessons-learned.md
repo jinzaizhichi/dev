@@ -403,19 +403,21 @@ I've implemented other language interpreters (e.g. GCode) but never one that
 I would consider a "proper" language and certainly not one that has introspection
 as a first class idea.
 
+In some sense, the very reason I didn't like Lisp in the first place is the reason
+why it's so enlightening.
+Lisp can be a powerful language, especially for niche areas where a DSL is needed,
+and its implementation simplicity make it a good candidate for those areas.
+The simplicity in implementation while still capturing the core concepts of language
+design make it a good candidate to learn language and compiler design.
 
 Having implemented a Lisp, even if it's just a taste,
 I feel much more comfortable in understanding compilers and language design.
+The focus on environments was, alone, worth the time to implement it.
 
 The above does sound pretty negative and I'm not sure if it's worth saying.
 I don't feel strongly about my critiques, especially now that AI research is progressing
 so quickly, and I can see many benefits from the ideas that Lisp has to offer.
 I have to stop myself from becoming enamored by Lisp because I know how clunky it is to use.
-Investment in other ares will be most likely be more fruitful.
-
-I am happy to have implemented my own Lisp.
-I do feel more enlightened for it, even if it's minor.
-I will reach first for Lisp whenever I need a language for a specific, niche task.
 
 
 References
