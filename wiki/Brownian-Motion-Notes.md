@@ -39,8 +39,11 @@ $$
 \begin{array}{l}
 \tau = \arg \min _ t W  (t) \\
 W ^ +  (t) = W ( (t+\tau) \bmod 1 )  - W (\tau) \\
+\Pr\{ W ^ + (t) = y \} = \frac{ y ^ 2 }{ \sqrt{ 2 \pi t ^ 3 (1-t) ^ 3}  }  \exp (- \frac{y^2}{2t(1-t)} ) \\
 \end{array}
 $$
+
+
 
 Brownian Meander
 ---
